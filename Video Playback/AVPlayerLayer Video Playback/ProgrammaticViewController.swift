@@ -35,7 +35,7 @@ class ProgrammaticViewController: UIViewController {
     }()
     
     enum Layout {
-        static let leadingAndTrailingMargin: CGFloat = 25
+        static let playbackControlMargins: CGFloat = 25
     }
     
     // MARK: VIEWCYCLE
@@ -85,18 +85,18 @@ class ProgrammaticViewController: UIViewController {
         
         // playbackSlider
         NSLayoutConstraint.activate([
-            playbackSlider.topAnchor.constraint(equalTo: playbackView.bottomAnchor),
-            playbackSlider.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: Layout.leadingAndTrailingMargin),
-            playbackSlider.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -Layout.leadingAndTrailingMargin),
+            playbackSlider.topAnchor.constraint(equalTo: playbackView.bottomAnchor, constant: Layout.playbackControlMargins),
+            playbackSlider.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: Layout.playbackControlMargins),
+            playbackSlider.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -Layout.playbackControlMargins),
             playbackSlider.bottomAnchor.constraint(equalTo: videoPlaybackControlsView.topAnchor)
         ])
         
         // videoPlaybackControlsView
         NSLayoutConstraint.activate([
             videoPlaybackControlsView.topAnchor.constraint(equalTo: playbackSlider.bottomAnchor),
-            videoPlaybackControlsView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: Layout.leadingAndTrailingMargin),
-            videoPlaybackControlsView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -Layout.leadingAndTrailingMargin),
-            videoPlaybackControlsView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            videoPlaybackControlsView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: Layout.playbackControlMargins),
+            videoPlaybackControlsView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -Layout.playbackControlMargins),
+            videoPlaybackControlsView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -Layout.playbackControlMargins)
         ])
     }
     
