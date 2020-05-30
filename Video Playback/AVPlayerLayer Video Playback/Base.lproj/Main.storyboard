@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AVPlayerLayer_Video_Playback" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q2W-XX-Fr0" userLabel="Video View">
+                                <rect key="frame" x="0.0" y="44" width="414" height="335"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="1sN-cw-PhG">
+                                        <rect key="frame" x="30" y="275" width="354" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfJ-fg-ujz">
+                                                <rect key="frame" x="0.0" y="0.0" width="88.5" height="60"/>
+                                                <color key="tintColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button" image="play.fill" catalog="system"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IXB-Fv-ecU">
+                                                <rect key="frame" x="88.5" y="0.0" width="88.5" height="60"/>
+                                                <color key="tintColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button" image="pause.fill" catalog="system"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RTB-GZ-cLZ">
+                                                <rect key="frame" x="177" y="0.0" width="88.5" height="60"/>
+                                                <color key="tintColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button" image="stop.fill" catalog="system"/>
+                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="lFu-OW-jTD">
+                                                <rect key="frame" x="265.5" y="0.0" width="88.5" height="60"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Joh-YP-sGV">
+                                                        <rect key="frame" x="0.0" y="0.0" width="88.5" height="30"/>
+                                                        <color key="tintColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="Half Speed"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kWA-wY-2RV">
+                                                        <rect key="frame" x="0.0" y="30" width="88.5" height="30"/>
+                                                        <color key="tintColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="Double Speed"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="1sN-cw-PhG" secondAttribute="trailing" constant="30" id="3Q1-cU-KoV"/>
+                                    <constraint firstItem="1sN-cw-PhG" firstAttribute="leading" secondItem="Q2W-XX-Fr0" secondAttribute="leading" constant="30" id="d8H-fg-QQX"/>
+                                    <constraint firstAttribute="bottom" secondItem="1sN-cw-PhG" secondAttribute="bottom" id="kJI-Cw-vlQ"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9H-iF-PxC">
+                                <rect key="frame" x="77" y="403" width="260" height="100"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="GCS-qZ-9Jc"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="oSW-fH-k1z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                <state key="normal" title="Play Video on Current ViewController">
+                                    <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="playCurrentVCButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xEZ-aH-Yjf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yr7-eA-pBJ">
+                                <rect key="frame" x="137" y="523" width="140" height="100"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="1me-AW-opJ"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="SUf-j6-XYI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                <state key="normal" title="Play Video on Modal">
+                                    <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="playModalButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cdz-NR-Grf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bdo-pj-NxK">
+                                <rect key="frame" x="125" y="643" width="164" height="100"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="Rry-ip-mtm"/>
+                                    <constraint firstAttribute="height" constant="100" id="aDf-qo-h7v"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                <state key="normal" title="Programmatic Playback">
+                                    <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="programmaticPlaybackButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Eaf-mk-51r"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Yr7-eA-pBJ" firstAttribute="centerX" secondItem="j9H-iF-PxC" secondAttribute="centerX" id="19C-GP-DnD"/>
+                            <constraint firstItem="j9H-iF-PxC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="4qu-RU-t78"/>
+                            <constraint firstItem="j9H-iF-PxC" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="BF6-53-kLc"/>
+                            <constraint firstItem="Bdo-pj-NxK" firstAttribute="centerX" secondItem="Yr7-eA-pBJ" secondAttribute="centerX" id="BUd-6W-qWS"/>
+                            <constraint firstItem="Q2W-XX-Fr0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="H6X-Ic-ngl"/>
+                            <constraint firstItem="Yr7-eA-pBJ" firstAttribute="top" secondItem="j9H-iF-PxC" secondAttribute="bottom" constant="20" id="KFL-Rd-l3v"/>
+                            <constraint firstItem="Q2W-XX-Fr0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ZDl-gO-Ojd"/>
+                            <constraint firstItem="Q2W-XX-Fr0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gqU-uO-lzR"/>
+                            <constraint firstItem="Q2W-XX-Fr0" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.373884" id="lOC-t3-8mj"/>
+                            <constraint firstItem="Bdo-pj-NxK" firstAttribute="top" secondItem="Yr7-eA-pBJ" secondAttribute="bottom" constant="20" id="oFV-TM-dmV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Q2W-XX-Fr0" secondAttribute="trailing" id="zaU-nK-5QK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="videoView" destination="Q2W-XX-Fr0" id="tWZ-ux-c0G"/>
+                        <segue destination="RsD-FA-qaN" kind="presentation" identifier="toVideoVC" id="YEt-UH-k1x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="11.594202898550726" y="-3.3482142857142856"/>
+        </scene>
+        <!--Play Video View Controller-->
+        <scene sceneID="Xb0-iG-FdK">
+            <objects>
+                <viewController id="RsD-FA-qaN" customClass="PlayVideoViewController" customModule="AVPlayerLayer_Video_Playback" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nmP-I6-u3O">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ac-Vd-Ba6">
+                                <rect key="frame" x="10" y="0.0" width="394" height="783"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Zm6-xT-vja">
+                                <rect key="frame" x="25" y="698" width="364" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QWg-CB-MDQ" userLabel="Play Button">
+                                        <rect key="frame" x="0.0" y="0.0" width="91" height="60"/>
+                                        <color key="tintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="play.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="playButtonTapped:" destination="RsD-FA-qaN" eventType="touchUpInside" id="Mze-xL-hhq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acV-xR-6YN" userLabel="Pause Button">
+                                        <rect key="frame" x="91" y="0.0" width="91" height="60"/>
+                                        <color key="tintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="pause.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="pauseButtonTapped:" destination="RsD-FA-qaN" eventType="touchUpInside" id="Hgk-O2-2bV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gui-9F-1Jl" userLabel="Stop Button">
+                                        <rect key="frame" x="182" y="0.0" width="91" height="60"/>
+                                        <color key="tintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="stop.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="stopButtonTapped:" destination="RsD-FA-qaN" eventType="touchUpInside" id="wXv-hE-VYG"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1Xe-DM-BPA">
+                                        <rect key="frame" x="273" y="0.0" width="91" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaa-rB-6sr">
+                                                <rect key="frame" x="0.0" y="0.0" width="91" height="30"/>
+                                                <color key="tintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="1/2 Speed"/>
+                                                <connections>
+                                                    <action selector="halfSpeedButtonTapped:" destination="RsD-FA-qaN" eventType="touchUpInside" id="WoZ-bl-BQd"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L9J-IX-KoX">
+                                                <rect key="frame" x="0.0" y="30" width="91" height="30"/>
+                                                <color key="tintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="3/4 Speed"/>
+                                                <connections>
+                                                    <action selector="threeFourthsSpeedButtonTapped:" destination="RsD-FA-qaN" eventType="touchUpInside" id="DSw-yz-bN0"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="O9D-49-9Z9" firstAttribute="bottom" secondItem="Zm6-xT-vja" secondAttribute="bottom" constant="50" id="GQj-tu-Pqi"/>
+                            <constraint firstItem="Zm6-xT-vja" firstAttribute="leading" secondItem="O9D-49-9Z9" secondAttribute="leading" constant="25" id="Oeu-DP-Ugg"/>
+                            <constraint firstItem="6ac-Vd-Ba6" firstAttribute="centerX" secondItem="O9D-49-9Z9" secondAttribute="centerX" id="SuH-fZ-lNQ"/>
+                            <constraint firstItem="O9D-49-9Z9" firstAttribute="trailing" secondItem="6ac-Vd-Ba6" secondAttribute="trailing" constant="10" id="cgl-xY-REx"/>
+                            <constraint firstItem="Zm6-xT-vja" firstAttribute="centerX" secondItem="6ac-Vd-Ba6" secondAttribute="centerX" id="ekD-NZ-oNT"/>
+                            <constraint firstItem="O9D-49-9Z9" firstAttribute="bottom" secondItem="6ac-Vd-Ba6" secondAttribute="bottom" constant="25" id="n2E-Qs-l1o"/>
+                            <constraint firstItem="O9D-49-9Z9" firstAttribute="trailing" secondItem="Zm6-xT-vja" secondAttribute="trailing" constant="25" id="nh1-cv-TTb"/>
+                            <constraint firstItem="6ac-Vd-Ba6" firstAttribute="top" secondItem="O9D-49-9Z9" secondAttribute="top" id="qfc-sP-hI5"/>
+                            <constraint firstItem="6ac-Vd-Ba6" firstAttribute="leading" secondItem="O9D-49-9Z9" secondAttribute="leading" constant="10" id="xSu-6g-Uwk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="O9D-49-9Z9"/>
+                    </view>
+                    <connections>
+                        <outlet property="halfSpeedButton" destination="gaa-rB-6sr" id="Uji-Pq-JqT"/>
+                        <outlet property="pauseButton" destination="acV-xR-6YN" id="SXa-3y-DJy"/>
+                        <outlet property="playButton" destination="QWg-CB-MDQ" id="Flh-oY-o9H"/>
+                        <outlet property="stopButton" destination="Gui-9F-1Jl" id="V1S-er-5EW"/>
+                        <outlet property="threeFourthsSpeedButton" destination="L9J-IX-KoX" id="PKN-2U-GcG"/>
+                        <outlet property="videoView" destination="6ac-Vd-Ba6" id="hRq-Nn-YDW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ict-Qt-01U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="902.89855072463774" y="-3.3482142857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pause.fill" catalog="system" width="116" height="128"/>
+        <image name="play.fill" catalog="system" width="116" height="128"/>
+        <image name="stop.fill" catalog="system" width="128" height="113"/>
+    </resources>
+</document>
