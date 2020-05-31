@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// Allow parent view to handle a PlaybackSliderView's value change
 protocol PlaybackSliderControlDelegate: class {
     func didTapSlider(value: Float)
 }

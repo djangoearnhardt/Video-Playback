@@ -17,16 +17,6 @@ class PlaybackSliderView: UIView {
      -------------------------------------------------
     */
     
-    public override init(frame: CGRect) {
-        super.init(frame: frame)
-        constructSubviews()
-        constructSubviewConstraints()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     // MARK: PROPERTIES
     weak var playbackSliderControlDelegate: PlaybackSliderControlDelegate?
     
@@ -46,6 +36,17 @@ class PlaybackSliderView: UIView {
         playbackSlider.addTarget(self, action: #selector(sliderValueDidChange), for: .valueChanged)
         return playbackSlider
     }()
+    
+    // MARK: LIFECYCLE
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+        constructSubviews()
+        constructSubviewConstraints()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     // MARK: HELPER FUNCTIONS
     func constructSubviews() {
@@ -63,6 +64,7 @@ class PlaybackSliderView: UIView {
         ])
     }
  
+    // MARK: DELEGATE METHOD
     @objc private func sliderValueDidChange(_ sender: UISlider) {
         playbackSliderControlDelegate?.didTapSlider(value: sender.value)
     }

@@ -13,11 +13,13 @@ class ProgrammaticViewController: UIViewController {
     // MARK: TODO https://www.youtube.com/watch?v=HX1aYzaHex8 and youtube folder for slider progress
     // https://www.letsbuildthatapp.com/course_video?id=282
     // Have video controls sit on top of view, and opacity for it... as well as some type of background and opacity for durationlabel
+    
     // MARK: PROPERTIES
+    let favoritesView: FavoritesView = FavoritesView()
     let playbackSlider: PlaybackSliderView = PlaybackSliderView()
     let playbackView: PlaybackView = PlaybackView()
     var videoURL: URL?
-    var videoTimestamps: [CMTime] = []
+    var favoriteTimeStamps: [CMTime] = []
     let videoPlaybackControlsView: VideoPlaybackControlsView = VideoPlaybackControlsView()
     
     private let activityIndicatorView: UIActivityIndicatorView = {
@@ -42,22 +44,32 @@ class ProgrammaticViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.self.backgroundColor = .black
-        view.addSubview(playbackView)
-        view.addSubview(playbackSlider)
-        view.addSubview(videoPlaybackControlsView)
-        view.addSubview(durationLabel)
-        view.addSubview(activityIndicatorView)
+        
+        addSubviews()
         constructSubviewConstraints()
         setupVideoForPlayback()
-        playbackSlider.playbackSliderControlDelegate = self // adopt delegate for sliderView
-        videoPlaybackControlsView.videoPlaybackControlsDelegate = self // adopt delegate for video controls
-        videoPlaybackControlsView.videoPlaybackControlsFavoritesDelegate = self // adopt delegate for favorites
-
+        adoptDelegates()
     }
     
     // MARK: HELPER FUNCTIONS
+    func addSubviews() {
+        view.addSubview(playbackView)
+        view.addSubview(playbackSlider)
+        view.addSubview(videoPlaybackControlsView)
+        view.addSubview(favoritesView)
+        view.addSubview(durationLabel)
+        view.addSubview(activityIndicatorView)
+    }
+    
+    func adoptDelegates() {
+        playbackSlider.playbackSliderControlDelegate = self // adopt delegate for sliderView
+        videoPlaybackControlsView.videoPlaybackControlsDelegate = self // adopt delegate for video controls
+        videoPlaybackControlsView.videoPlaybackControlsFavoritesDelegate = self // adopt delegate for favorites
+        favoritesView.favoritesViewDelegate = self // adopt delegate for favoritesView
+    }
+    
     func constructSubviewConstraints() {
-        let views = [durationLabel, activityIndicatorView, playbackView, playbackSlider, videoPlaybackControlsView]
+        let views = [durationLabel, favoritesView, activityIndicatorView, playbackView, playbackSlider, videoPlaybackControlsView]
         
         // Allow to specify autolayout constraints by setting .translatesAutoresizingMaskIntoConstraints to false
         views.forEach { $0.translatesAutoresizingMaskIntoConstraints = false }
@@ -73,6 +85,13 @@ class ProgrammaticViewController: UIViewController {
             durationLabel.widthAnchor.constraint(equalToConstant: 50),
             durationLabel.topAnchor.constraint(equalTo: playbackView.topAnchor, constant: 20),
             durationLabel.trailingAnchor.constraint(equalTo: playbackView.trailingAnchor, constant: -20)
+        ])
+        
+        // favoritesView
+        NSLayoutConstraint.activate([
+            favoritesView.widthAnchor.constraint(equalToConstant: 50),
+            favoritesView.leadingAnchor.constraint(equalTo: durationLabel.leadingAnchor),
+            favoritesView.topAnchor.constraint(equalTo: durationLabel.bottomAnchor),
         ])
         
         // playbackView
@@ -128,41 +147,30 @@ class ProgrammaticViewController: UIViewController {
                 let durationSeconds = duration.seconds
                 // FIXME: Delegate slider value to track along with this time. Need to be able to set playbackSlider.value to (Float(seconds / durationSeconds))
 //                sliderthumb? = Float(seconds / durationSeconds)
-                
             }
         })
     }
     
-    // Section for updating video progress time
+    // Add an observer to dismiss the activityIndicatorView when the video is loaded
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if keyPath == "currentItem.loadedTimeRanges" {
             activityIndicatorView.stopAnimating()
-            
-            if let duration = playbackView.player?.currentItem?.duration { // CMTime reference
-                let seconds = CMTimeGetSeconds(duration) // Convert CMTime to seconds
-                let secondsText = String(format: "%02d", Int(seconds) % 60)
-                let minutesText = String(format: "%02d", Int(seconds) / 60)
-//                durationLabel.text = "\(minutesText):\(secondsText)"
-            }
         }
     }
     
     func playFrom(timeStamp: CMTime) {
-        playbackView.player?.seek(to: timeStamp)
+        playbackView.player?.seek(to: timeStamp, toleranceBefore: .zero, toleranceAfter: .zero)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    func convertToMinutesAndSecondsFrom(_ timeStamp: CMTime) -> String {
+        let seconds = CMTimeGetSeconds(timeStamp) // Convert CMTime to seconds
+        let secondsText = String(format: "%02d", Int(seconds) % 60)
+        let minutesText = String(format: "%02d", Int(seconds) / 60)
+        return "\(minutesText):\(secondsText)"
     }
-    */
-
 }
 
-// MARK: EXTENSIONS
+// MARK: DELGATE EXTENSIONS
 extension ProgrammaticViewController: VideoPlaybackControlsDelegate {
     
     func didTapButton(title: String) {
@@ -184,18 +192,21 @@ extension ProgrammaticViewController: VideoPlaybackControlsDelegate {
 extension ProgrammaticViewController: VideoPlaybackControlsFavoritesDelegate {
     var favorites: [CMTime] {
         get {
-            print(videoTimestamps)
-            return videoTimestamps
+            print(favoriteTimeStamps)
+            return favoriteTimeStamps
         }
         set {
-            videoTimestamps = newValue
+            favoriteTimeStamps = newValue
         }
     }
     
     func didTapFavoritesButton(title: String) {
         guard let timeStamp = playbackView.player?.currentTime() else { return }
+        // TODO: Make this an array of timestamps so the user can have more than one favorite timestamp
+        favorites = [] // For now clear the array each time a new favorite is added
         favorites.append(timeStamp)
-        print(favorites.count)
+//        favoritesView.isHidden = false
+        favoritesView.favoritesButton.titleLabel?.text = convertToMinutesAndSecondsFrom(timeStamp)
     }
 }
 
@@ -213,5 +224,20 @@ extension ProgrammaticViewController: PlaybackSliderControlDelegate {
                 
             })
         }
+    }
+}
+
+extension ProgrammaticViewController: FavoritesViewDelegate {
+    func buttonTapped(title: String) {
+        guard let timeStamp = favorites.last else { return }
+        playFrom(timeStamp: timeStamp)
+    }
+}
+
+// MARK: EXTENSIONS
+
+extension ProgrammaticViewController {
+    func presentFavorites() {
+        
     }
 }

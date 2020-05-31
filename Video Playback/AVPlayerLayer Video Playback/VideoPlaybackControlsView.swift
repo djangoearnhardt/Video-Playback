@@ -18,17 +18,8 @@ class VideoPlaybackControlsView: UIView {
      |          |           |          | - 3/4 Speed - |
       -------------------------------------------------
      */
-    
-    public override init(frame: CGRect) {
-        super.init(frame: frame)
-        constructSubviews()
-        constructSubviewConstraints()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
+
+    // MARK: PROPERTIES
     weak var videoPlaybackControlsDelegate: VideoPlaybackControlsDelegate? // Delegate video playback controls, on button taps
     weak var videoPlaybackControlsFavoritesDelegate: VideoPlaybackControlsFavoritesDelegate? // Delegate video playback control favorites, on button taps
     
@@ -93,6 +84,18 @@ class VideoPlaybackControlsView: UIView {
         return threeFourthsSpeedButton
     }()
     
+    // MARK: LIFECYCLE
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+        constructSubviews()
+        constructSubviewConstraints()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: HELPER FUNCTIONS
     func constructSubviews() {
         // Add the buttons to the horizontalStackView, add the speed buttons to the verticalStackView, add the verticalStackView to the horizontalStackView, then add horizontalStackView to the subviews
         horizontalStackView.addArrangedSubview(playButton)
@@ -158,6 +161,7 @@ class VideoPlaybackControlsView: UIView {
         ])
     }
     
+    // MARK: DELEGATE METHODS
     @objc private func buttonTapped(_ sender: UIButton) {
         guard let title = sender.titleLabel?.text else { return }
         videoPlaybackControlsDelegate?.didTapButton(title: title)

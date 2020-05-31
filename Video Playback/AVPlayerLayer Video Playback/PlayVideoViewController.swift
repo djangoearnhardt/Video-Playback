@@ -30,8 +30,6 @@ class PlayVideoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         debugPrint(videoView!)
-//        presentPlaybackView()
-//        debugPrint(videoURL!)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -67,19 +65,16 @@ class PlayVideoViewController: UIViewController {
         let asset = AVAsset(url: videoURL)
         let playerItem = AVPlayerItem(asset: asset)
         let player = AVPlayer(playerItem: playerItem)
-//        playbackView.player = AVPlayer(playerItem: playerItem)
         
-//        playbackView.player?.play()
-        
-        //3. Create AVPlayerLayer object
+        //1. Create AVPlayerLayer object
         let playerLayer = AVPlayerLayer(player: player)
         playerLayer.frame = videoView.bounds
         playerLayer.videoGravity = .resizeAspectFill
-//        
-//        //4. Add playerLayer to view's layer
+
+        //2. Add playerLayer to view's layer
         videoView.layer.addSublayer(playerLayer)
         
-        //5. Play Video
+        //3. Play Video
         player.play()
     }
 }

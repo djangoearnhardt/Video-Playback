@@ -21,6 +21,8 @@
 		421B63432479E43E00D53FB6 /* PlaybackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421B63422479E43E00D53FB6 /* PlaybackView.swift */; };
 		421B6345247A0FDD00D53FB6 /* PlayVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421B6344247A0FDD00D53FB6 /* PlayVideoViewController.swift */; };
 		423F6BE5247D5A22003D446B /* PlaybackSliderControlDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423F6BE4247D5A22003D446B /* PlaybackSliderControlDelegate.swift */; };
+		42D9F0C2248317FD002E7E16 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D9F0C1248317FD002E7E16 /* FavoritesView.swift */; };
+		42D9F0CA248329A8002E7E16 /* FavoritesViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D9F0C9248329A8002E7E16 /* FavoritesViewDelegate.swift */; };
 		42F68EA5247B2E0B0092100D /* VideoPlaybackControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F68EA4247B2E0B0092100D /* VideoPlaybackControlsView.swift */; };
 		42F68EA7247B3C8F0092100D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F68EA6247B3C8E0092100D /* ViewController.swift */; };
 		42F68EA9247B3CAF0092100D /* ProgrammaticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F68EA8247B3CAF0092100D /* ProgrammaticViewController.swift */; };
@@ -49,6 +51,8 @@
 		421B63422479E43E00D53FB6 /* PlaybackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackView.swift; sourceTree = "<group>"; };
 		421B6344247A0FDD00D53FB6 /* PlayVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayVideoViewController.swift; sourceTree = "<group>"; };
 		423F6BE4247D5A22003D446B /* PlaybackSliderControlDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSliderControlDelegate.swift; sourceTree = "<group>"; };
+		42D9F0C1248317FD002E7E16 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		42D9F0C9248329A8002E7E16 /* FavoritesViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewDelegate.swift; sourceTree = "<group>"; };
 		42F68EA4247B2E0B0092100D /* VideoPlaybackControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlaybackControlsView.swift; sourceTree = "<group>"; };
 		42F68EA6247B3C8E0092100D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		42F68EA8247B3CAF0092100D /* ProgrammaticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammaticViewController.swift; sourceTree = "<group>"; };
@@ -117,11 +121,13 @@
 				421B6344247A0FDD00D53FB6 /* PlayVideoViewController.swift */,
 				42F68EA8247B3CAF0092100D /* ProgrammaticViewController.swift */,
 				421B63422479E43E00D53FB6 /* PlaybackView.swift */,
+				42D9F0C1248317FD002E7E16 /* FavoritesView.swift */,
+				42D9F0C9248329A8002E7E16 /* FavoritesViewDelegate.swift */,
 				42F68EB2247C641E0092100D /* PlaybackSliderView.swift */,
+				423F6BE4247D5A22003D446B /* PlaybackSliderControlDelegate.swift */,
 				42F68EA4247B2E0B0092100D /* VideoPlaybackControlsView.swift */,
 				42F68EAC247C3BE10092100D /* VideoPlaybackControlsDelegate.swift */,
 				42F68EB0247C54B60092100D /* VideoPlaybackControlsFavoritesDelegate.swift */,
-				423F6BE4247D5A22003D446B /* PlaybackSliderControlDelegate.swift */,
 				42F68EAE247C45350092100D /* PlaybackControls.swift */,
 				421B63362479E3D100D53FB6 /* Main.storyboard */,
 				421B63392479E3D400D53FB6 /* Assets.xcassets */,
@@ -245,6 +251,7 @@
 			files = (
 				42F68EA7247B3C8F0092100D /* ViewController.swift in Sources */,
 				42F68EA5247B2E0B0092100D /* VideoPlaybackControlsView.swift in Sources */,
+				42D9F0C2248317FD002E7E16 /* FavoritesView.swift in Sources */,
 				42F68EA9247B3CAF0092100D /* ProgrammaticViewController.swift in Sources */,
 				42F68EAF247C45350092100D /* PlaybackControls.swift in Sources */,
 				421B6345247A0FDD00D53FB6 /* PlayVideoViewController.swift in Sources */,
@@ -253,6 +260,7 @@
 				421B63332479E3D100D53FB6 /* SceneDelegate.swift in Sources */,
 				423F6BE5247D5A22003D446B /* PlaybackSliderControlDelegate.swift in Sources */,
 				421B63432479E43E00D53FB6 /* PlaybackView.swift in Sources */,
+				42D9F0CA248329A8002E7E16 /* FavoritesViewDelegate.swift in Sources */,
 				42F68EB3247C641E0092100D /* PlaybackSliderView.swift in Sources */,
 				42F68EB1247C54B60092100D /* VideoPlaybackControlsFavoritesDelegate.swift in Sources */,
 			);
