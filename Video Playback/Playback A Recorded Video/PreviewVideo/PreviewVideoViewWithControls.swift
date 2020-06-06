@@ -15,7 +15,7 @@ class PreviewVideoViewWithControls: UIView {
     |                                                |
     |                            - Duration Label -  | // MARK: TODO - Add this
     |                                                |
-    |            - Video Preview View -              |
+    |            - Preview Video View -              |
     |                                                |
      ------------------------------------------------
     | -----------------  Slider  --------------------|
@@ -51,7 +51,7 @@ class PreviewVideoViewWithControls: UIView {
     
     private let horizontalStackView: UIStackView = {
        let horizontalStackView = UIStackView()
-        horizontalStackView.axis = NSLayoutConstraint.Axis.horizontal // maybe replace with .horizontal
+        horizontalStackView.axis = .horizontal // maybe replace with .horizontal
         horizontalStackView.distribution = .fillEqually
         return horizontalStackView
     }()

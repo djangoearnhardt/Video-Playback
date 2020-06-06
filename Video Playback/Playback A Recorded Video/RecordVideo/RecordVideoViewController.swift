@@ -237,6 +237,7 @@ class RecordVideoViewController: UIViewController, AVCaptureFileOutputRecordingD
          Do not create an AVCaptureMovieFileOutput when setting up the session because
          Live Photo is not supported when AVCaptureMovieFileOutput is added to the session.
          */
+        
         session.sessionPreset = .photo
         
         // Add video input.
@@ -550,6 +551,7 @@ class RecordVideoViewController: UIViewController, AVCaptureFileOutputRecordingD
                     movieFileOutput.setOutputSettings([AVVideoCodecKey: AVVideoCodecType.hevc], for: movieFileOutputConnection!)
                 }
                 // FIXME: FIXME - Maybe create a url the same way as audio, the private location might be preventing playback and we need to find a public place to access the video
+                
                 // Start recording video to a temporary file.
                 let outputFileName = NSUUID().uuidString
                 let outputFilePath = (NSTemporaryDirectory() as NSString).appendingPathComponent((outputFileName as NSString).appendingPathExtension("mov")!)
@@ -566,7 +568,6 @@ class RecordVideoViewController: UIViewController, AVCaptureFileOutputRecordingD
         // Enable the Record button to let the user stop recording.
         DispatchQueue.main.async {
             self.recordVideoButton.isEnabled = true
-//            self.recordVideoButton.setImage(#imageLiteral(resourceName: "recordVideoActive"), for: [])
         }
     }
     
@@ -640,7 +641,6 @@ class RecordVideoViewController: UIViewController, AVCaptureFileOutputRecordingD
             // Only enable the ability to change camera if the device has more than one camera.
             self.chooseCameraButton.isEnabled = self.videoDeviceDiscoverySession.uniqueDevicePositionsCount > 1
             self.recordVideoButton.isEnabled = true
-//            self.recordVideoButton.setImage(#imageLiteral(resourceName: "recordVideoInactive"), for: [])
         }
     }
     
@@ -815,16 +815,6 @@ class RecordVideoViewController: UIViewController, AVCaptureFileOutputRecordingD
             )
         }
     }
-    /*
-     // MARK: - NAVIGATION
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
 }
 
 // MARK: EXTENSIONS
@@ -894,6 +884,7 @@ extension AVCaptureDevice.DiscoverySession {
     }
 }
 
+// MARK: VIDEO CONTROLLING
 extension RecordVideoViewController: VideoControlling {
     var previewVideoView: PreviewVideoView {
         get {
@@ -928,7 +919,7 @@ extension RecordVideoViewController: VideoControlling {
     }
 }
 
-// Preparing video for playback
+// MARK: PREPARE VIDEO FOR PLAYBACK
 extension RecordVideoViewController {
     func prepareVideoForPlayback() {
             guard let videoURL = videoURL else { return }
@@ -937,7 +928,6 @@ extension RecordVideoViewController {
             let player = AVPlayer(playerItem: playerItem)
             previewVideoViewWithControls.previewVideoView.player = player
             previewVideoViewWithControls.previewVideoView.videoPreviewLayer.videoGravity = .resizeAspectFill
-
             // FIXME: TODO - Add durationLabel and timer to preview clip from Video Playback project
         }
 }
