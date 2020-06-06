@@ -9,6 +9,8 @@
 import Foundation
 
 struct PlaybackControls {
+    static let delete = "delete"
+    static let submit = "submit"
     static let play = "play"
     static let pause = "pause"
     static let favorite = "favorite"

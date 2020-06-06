@@ -23,6 +23,18 @@
 		423F6BE5247D5A22003D446B /* PlaybackSliderControlDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423F6BE4247D5A22003D446B /* PlaybackSliderControlDelegate.swift */; };
 		42D9F0C2248317FD002E7E16 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D9F0C1248317FD002E7E16 /* FavoritesView.swift */; };
 		42D9F0CA248329A8002E7E16 /* FavoritesViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D9F0C9248329A8002E7E16 /* FavoritesViewDelegate.swift */; };
+		42E889E7248B4DCA00A7002E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E889E6248B4DCA00A7002E /* AppDelegate.swift */; };
+		42E889E9248B4DCA00A7002E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E889E8248B4DCA00A7002E /* SceneDelegate.swift */; };
+		42E889EE248B4DCA00A7002E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42E889EC248B4DCA00A7002E /* Main.storyboard */; };
+		42E889F0248B4DCF00A7002E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42E889EF248B4DCF00A7002E /* Assets.xcassets */; };
+		42E889F3248B4DCF00A7002E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42E889F1248B4DCF00A7002E /* LaunchScreen.storyboard */; };
+		42E889FC248B4E8B00A7002E /* RecordVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E889FB248B4E8B00A7002E /* RecordVideoViewController.swift */; };
+		42E889FE248B4EA100A7002E /* RecordVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E889FD248B4EA100A7002E /* RecordVideoView.swift */; };
+		42E88A01248B4F5000A7002E /* PreviewVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E88A00248B4F5000A7002E /* PreviewVideoView.swift */; };
+		42E88A03248B500C00A7002E /* PreviewVideoViewWithControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E88A02248B500C00A7002E /* PreviewVideoViewWithControls.swift */; };
+		42E88A05248B50C200A7002E /* VideoControlling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E88A04248B50C200A7002E /* VideoControlling.swift */; };
+		42E88A06248B541400A7002E /* PlaybackControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F68EAE247C45350092100D /* PlaybackControls.swift */; };
+		42E88A07248B541600A7002E /* PlaybackControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F68EAE247C45350092100D /* PlaybackControls.swift */; };
 		42F68EA5247B2E0B0092100D /* VideoPlaybackControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F68EA4247B2E0B0092100D /* VideoPlaybackControlsView.swift */; };
 		42F68EA7247B3C8F0092100D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F68EA6247B3C8E0092100D /* ViewController.swift */; };
 		42F68EA9247B3CAF0092100D /* ProgrammaticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F68EA8247B3CAF0092100D /* ProgrammaticViewController.swift */; };
@@ -53,6 +65,18 @@
 		423F6BE4247D5A22003D446B /* PlaybackSliderControlDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSliderControlDelegate.swift; sourceTree = "<group>"; };
 		42D9F0C1248317FD002E7E16 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		42D9F0C9248329A8002E7E16 /* FavoritesViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewDelegate.swift; sourceTree = "<group>"; };
+		42E889E4248B4DCA00A7002E /* Playback A Recorded Video.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Playback A Recorded Video.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		42E889E6248B4DCA00A7002E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		42E889E8248B4DCA00A7002E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		42E889ED248B4DCA00A7002E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		42E889EF248B4DCF00A7002E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		42E889F2248B4DCF00A7002E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		42E889F4248B4DCF00A7002E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42E889FB248B4E8B00A7002E /* RecordVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordVideoViewController.swift; sourceTree = "<group>"; };
+		42E889FD248B4EA100A7002E /* RecordVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordVideoView.swift; sourceTree = "<group>"; };
+		42E88A00248B4F5000A7002E /* PreviewVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewVideoView.swift; sourceTree = "<group>"; };
+		42E88A02248B500C00A7002E /* PreviewVideoViewWithControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewVideoViewWithControls.swift; sourceTree = "<group>"; };
+		42E88A04248B50C200A7002E /* VideoControlling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoControlling.swift; sourceTree = "<group>"; };
 		42F68EA4247B2E0B0092100D /* VideoPlaybackControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlaybackControlsView.swift; sourceTree = "<group>"; };
 		42F68EA6247B3C8E0092100D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		42F68EA8247B3CAF0092100D /* ProgrammaticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammaticViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +101,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		42E889E1248B4DCA00A7002E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -85,6 +116,7 @@
 			children = (
 				421B63152479E2AE00D53FB6 /* Video Playback */,
 				421B632F2479E3D100D53FB6 /* AVPlayerLayer Video Playback */,
+				42E889E5248B4DCA00A7002E /* Playback A Recorded Video */,
 				421B63142479E2AE00D53FB6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -94,6 +126,7 @@
 			children = (
 				421B63132479E2AE00D53FB6 /* Video Playback.app */,
 				421B632E2479E3D100D53FB6 /* AVPlayerLayer Video Playback.app */,
+				42E889E4248B4DCA00A7002E /* Playback A Recorded Video.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -137,6 +170,40 @@
 			path = "AVPlayerLayer Video Playback";
 			sourceTree = "<group>";
 		};
+		42E889E5248B4DCA00A7002E /* Playback A Recorded Video */ = {
+			isa = PBXGroup;
+			children = (
+				42E889F8248B4E3D00A7002E /* RecordVideo */,
+				42E889FF248B4F4200A7002E /* PreviewVideo */,
+				42E889E6248B4DCA00A7002E /* AppDelegate.swift */,
+				42E889E8248B4DCA00A7002E /* SceneDelegate.swift */,
+				42E889EC248B4DCA00A7002E /* Main.storyboard */,
+				42E889EF248B4DCF00A7002E /* Assets.xcassets */,
+				42E889F1248B4DCF00A7002E /* LaunchScreen.storyboard */,
+				42E889F4248B4DCF00A7002E /* Info.plist */,
+			);
+			path = "Playback A Recorded Video";
+			sourceTree = "<group>";
+		};
+		42E889F8248B4E3D00A7002E /* RecordVideo */ = {
+			isa = PBXGroup;
+			children = (
+				42E889FD248B4EA100A7002E /* RecordVideoView.swift */,
+				42E889FB248B4E8B00A7002E /* RecordVideoViewController.swift */,
+			);
+			path = RecordVideo;
+			sourceTree = "<group>";
+		};
+		42E889FF248B4F4200A7002E /* PreviewVideo */ = {
+			isa = PBXGroup;
+			children = (
+				42E88A00248B4F5000A7002E /* PreviewVideoView.swift */,
+				42E88A02248B500C00A7002E /* PreviewVideoViewWithControls.swift */,
+				42E88A04248B50C200A7002E /* VideoControlling.swift */,
+			);
+			path = PreviewVideo;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -174,6 +241,23 @@
 			productReference = 421B632E2479E3D100D53FB6 /* AVPlayerLayer Video Playback.app */;
 			productType = "com.apple.product-type.application";
 		};
+		42E889E3248B4DCA00A7002E /* Playback A Recorded Video */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42E889F7248B4DCF00A7002E /* Build configuration list for PBXNativeTarget "Playback A Recorded Video" */;
+			buildPhases = (
+				42E889E0248B4DCA00A7002E /* Sources */,
+				42E889E1248B4DCA00A7002E /* Frameworks */,
+				42E889E2248B4DCA00A7002E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Playback A Recorded Video";
+			productName = "Playback A Recorded Video";
+			productReference = 42E889E4248B4DCA00A7002E /* Playback A Recorded Video.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -188,6 +272,9 @@
 						CreatedOnToolsVersion = 11.5;
 					};
 					421B632D2479E3D100D53FB6 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					42E889E3248B4DCA00A7002E = {
 						CreatedOnToolsVersion = 11.5;
 					};
 				};
@@ -207,6 +294,7 @@
 			targets = (
 				421B63122479E2AE00D53FB6 /* Video Playback */,
 				421B632D2479E3D100D53FB6 /* AVPlayerLayer Video Playback */,
+				42E889E3248B4DCA00A7002E /* Playback A Recorded Video */,
 			);
 		};
 /* End PBXProject section */
@@ -232,6 +320,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		42E889E2248B4DCA00A7002E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42E889F3248B4DCF00A7002E /* LaunchScreen.storyboard in Resources */,
+				42E889F0248B4DCF00A7002E /* Assets.xcassets in Resources */,
+				42E889EE248B4DCA00A7002E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -239,6 +337,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42E88A07248B541600A7002E /* PlaybackControls.swift in Sources */,
 				421B631B2479E2AE00D53FB6 /* ViewController.swift in Sources */,
 				421B63172479E2AE00D53FB6 /* AppDelegate.swift in Sources */,
 				421B63192479E2AE00D53FB6 /* SceneDelegate.swift in Sources */,
@@ -263,6 +362,21 @@
 				42D9F0CA248329A8002E7E16 /* FavoritesViewDelegate.swift in Sources */,
 				42F68EB3247C641E0092100D /* PlaybackSliderView.swift in Sources */,
 				42F68EB1247C54B60092100D /* VideoPlaybackControlsFavoritesDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42E889E0248B4DCA00A7002E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42E88A01248B4F5000A7002E /* PreviewVideoView.swift in Sources */,
+				42E889FC248B4E8B00A7002E /* RecordVideoViewController.swift in Sources */,
+				42E88A05248B50C200A7002E /* VideoControlling.swift in Sources */,
+				42E88A03248B500C00A7002E /* PreviewVideoViewWithControls.swift in Sources */,
+				42E889E7248B4DCA00A7002E /* AppDelegate.swift in Sources */,
+				42E88A06248B541400A7002E /* PlaybackControls.swift in Sources */,
+				42E889E9248B4DCA00A7002E /* SceneDelegate.swift in Sources */,
+				42E889FE248B4EA100A7002E /* RecordVideoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +411,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				421B633C2479E3D400D53FB6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		42E889EC248B4DCA00A7002E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				42E889ED248B4DCA00A7002E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		42E889F1248B4DCF00A7002E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				42E889F2248B4DCF00A7002E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -494,6 +624,44 @@
 			};
 			name = Release;
 		};
+		42E889F5248B4DCF00A7002E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UR48EZC8Y4;
+				INFOPLIST_FILE = "Playback A Recorded Video/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.djangoearnhardt.Playback-A-Recorded-Video";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		42E889F6248B4DCF00A7002E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UR48EZC8Y4;
+				INFOPLIST_FILE = "Playback A Recorded Video/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.djangoearnhardt.Playback-A-Recorded-Video";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -520,6 +688,15 @@
 			buildConfigurations = (
 				421B63402479E3D400D53FB6 /* Debug */,
 				421B63412479E3D400D53FB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42E889F7248B4DCF00A7002E /* Build configuration list for PBXNativeTarget "Playback A Recorded Video" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42E889F5248B4DCF00A7002E /* Debug */,
+				42E889F6248B4DCF00A7002E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
