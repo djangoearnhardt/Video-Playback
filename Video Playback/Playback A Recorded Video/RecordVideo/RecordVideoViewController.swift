@@ -568,6 +568,7 @@ class RecordVideoViewController: UIViewController, AVCaptureFileOutputRecordingD
         // Enable the Record button to let the user stop recording.
         DispatchQueue.main.async {
             self.recordVideoButton.isEnabled = true
+            self.recordVideoButton.pulsate()
         }
     }
     
@@ -641,6 +642,7 @@ class RecordVideoViewController: UIViewController, AVCaptureFileOutputRecordingD
             // Only enable the ability to change camera if the device has more than one camera.
             self.chooseCameraButton.isEnabled = self.videoDeviceDiscoverySession.uniqueDevicePositionsCount > 1
             self.recordVideoButton.isEnabled = true
+            self.recordVideoButton.layer.removeAllAnimations()
         }
     }
     
