@@ -22,6 +22,16 @@
 		421B6345247A0FDD00D53FB6 /* PlayVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421B6344247A0FDD00D53FB6 /* PlayVideoViewController.swift */; };
 		423F6BE5247D5A22003D446B /* PlaybackSliderControlDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423F6BE4247D5A22003D446B /* PlaybackSliderControlDelegate.swift */; };
 		429446C6248C6BA3007D6CFF /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429446C5248C6BA3007D6CFF /* UIButtonExtension.swift */; };
+		42C11FD1248FDA57002F3587 /* ProgrammaticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F68EA8247B3CAF0092100D /* ProgrammaticViewController.swift */; };
+		42C11FD2248FDAAC002F3587 /* PlaybackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421B63422479E43E00D53FB6 /* PlaybackView.swift */; };
+		42C11FD3248FDAAE002F3587 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D9F0C1248317FD002E7E16 /* FavoritesView.swift */; };
+		42C11FD4248FDAB1002F3587 /* FavoritesViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D9F0C9248329A8002E7E16 /* FavoritesViewDelegate.swift */; };
+		42C11FD5248FDAB3002F3587 /* PlaybackSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F68EB2247C641E0092100D /* PlaybackSliderView.swift */; };
+		42C11FD6248FDABD002F3587 /* PlaybackSliderControlDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423F6BE4247D5A22003D446B /* PlaybackSliderControlDelegate.swift */; };
+		42C11FD7248FDABD002F3587 /* VideoPlaybackControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F68EA4247B2E0B0092100D /* VideoPlaybackControlsView.swift */; };
+		42C11FD8248FDABD002F3587 /* VideoPlaybackControlsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F68EAC247C3BE10092100D /* VideoPlaybackControlsDelegate.swift */; };
+		42C11FD9248FDABD002F3587 /* VideoPlaybackControlsFavoritesDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F68EB0247C54B60092100D /* VideoPlaybackControlsFavoritesDelegate.swift */; };
+		42C11FDB248FDC8F002F3587 /* PreviewVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C11FDA248FDC8F002F3587 /* PreviewVideoViewController.swift */; };
 		42D9F0C2248317FD002E7E16 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D9F0C1248317FD002E7E16 /* FavoritesView.swift */; };
 		42D9F0CA248329A8002E7E16 /* FavoritesViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D9F0C9248329A8002E7E16 /* FavoritesViewDelegate.swift */; };
 		42E889E7248B4DCA00A7002E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E889E6248B4DCA00A7002E /* AppDelegate.swift */; };
@@ -65,6 +75,7 @@
 		421B6344247A0FDD00D53FB6 /* PlayVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayVideoViewController.swift; sourceTree = "<group>"; };
 		423F6BE4247D5A22003D446B /* PlaybackSliderControlDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSliderControlDelegate.swift; sourceTree = "<group>"; };
 		429446C5248C6BA3007D6CFF /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		42C11FDA248FDC8F002F3587 /* PreviewVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewVideoViewController.swift; sourceTree = "<group>"; };
 		42D9F0C1248317FD002E7E16 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		42D9F0C9248329A8002E7E16 /* FavoritesViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewDelegate.swift; sourceTree = "<group>"; };
 		42E889E4248B4DCA00A7002E /* Playback A Recorded Video.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Playback A Recorded Video.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -202,6 +213,7 @@
 			children = (
 				42E88A00248B4F5000A7002E /* PreviewVideoView.swift */,
 				42E88A02248B500C00A7002E /* PreviewVideoViewWithControls.swift */,
+				42C11FDA248FDC8F002F3587 /* PreviewVideoViewController.swift */,
 				42E88A04248B50C200A7002E /* VideoControlling.swift */,
 			);
 			path = PreviewVideo;
@@ -372,12 +384,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42C11FD2248FDAAC002F3587 /* PlaybackView.swift in Sources */,
 				42E88A01248B4F5000A7002E /* PreviewVideoView.swift in Sources */,
+				42C11FD6248FDABD002F3587 /* PlaybackSliderControlDelegate.swift in Sources */,
+				42C11FD9248FDABD002F3587 /* VideoPlaybackControlsFavoritesDelegate.swift in Sources */,
 				42E889FC248B4E8B00A7002E /* RecordVideoViewController.swift in Sources */,
 				42E88A05248B50C200A7002E /* VideoControlling.swift in Sources */,
 				42E88A03248B500C00A7002E /* PreviewVideoViewWithControls.swift in Sources */,
+				42C11FD1248FDA57002F3587 /* ProgrammaticViewController.swift in Sources */,
+				42C11FD8248FDABD002F3587 /* VideoPlaybackControlsDelegate.swift in Sources */,
+				42C11FD7248FDABD002F3587 /* VideoPlaybackControlsView.swift in Sources */,
+				42C11FD4248FDAB1002F3587 /* FavoritesViewDelegate.swift in Sources */,
 				42E889E7248B4DCA00A7002E /* AppDelegate.swift in Sources */,
+				42C11FD5248FDAB3002F3587 /* PlaybackSliderView.swift in Sources */,
+				42C11FDB248FDC8F002F3587 /* PreviewVideoViewController.swift in Sources */,
 				429446C6248C6BA3007D6CFF /* UIButtonExtension.swift in Sources */,
+				42C11FD3248FDAAE002F3587 /* FavoritesView.swift in Sources */,
 				42E88A06248B541400A7002E /* PlaybackControls.swift in Sources */,
 				42E889E9248B4DCA00A7002E /* SceneDelegate.swift in Sources */,
 				42E889FE248B4EA100A7002E /* RecordVideoView.swift in Sources */,

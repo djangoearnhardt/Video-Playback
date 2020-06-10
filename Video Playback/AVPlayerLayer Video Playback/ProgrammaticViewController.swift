@@ -46,9 +46,9 @@ class ProgrammaticViewController: UIViewController {
         view.self.backgroundColor = .black
         
         addSubviews()
+        adoptDelegates()
         constructSubviewConstraints()
         setupVideoForPlayback()
-        adoptDelegates()
     }
     
     // MARK: HELPER FUNCTIONS

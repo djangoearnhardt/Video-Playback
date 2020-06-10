@@ -24,7 +24,6 @@ class RecordVideoViewController: UIViewController, AVCaptureFileOutputRecordingD
     let previewVideoViewWithControls: PreviewVideoViewWithControls = PreviewVideoViewWithControls()
     var videoURL: URL? = nil // Set to nil, != nil then we can use videoPreviewViewWithControls' player
     
-    
     enum Layout {
         static let topAndBottomMargin: CGFloat = 35
         static let leadingAndTrailingMargin: CGFloat = 35
@@ -59,12 +58,10 @@ class RecordVideoViewController: UIViewController, AVCaptureFileOutputRecordingD
         super.viewDidLoad()
         
         view.addSubview(previewVideoViewWithControls)
+//        previewVideoViewWithControls.previewVideoView.backgroundColor = .orange
         previewVideoViewWithControls.isHidden = true // Initially true, until video is successfully recorded
         constructSubviewConstraints()
-        
-        // Adopt videoPreviewControlling Delegate
-        previewVideoViewWithControls.videoControlling = self
-        
+
         // Disable UI, enable when the sessions starts running
         chooseCameraButton.isEnabled = false
         recordVideoButton.isEnabled = false
@@ -553,10 +550,14 @@ class RecordVideoViewController: UIViewController, AVCaptureFileOutputRecordingD
                 // FIXME: FIXME - Maybe create a url the same way as audio, the private location might be preventing playback and we need to find a public place to access the video
                 
                 // Start recording video to a temporary file.
-                let outputFileName = NSUUID().uuidString
-                let outputFilePath = (NSTemporaryDirectory() as NSString).appendingPathComponent((outputFileName as NSString).appendingPathExtension("mov")!)
+//                let outputFileName = NSUUID().uuidString
+//                let outputFilePath = (NSTemporaryDirectory() as NSString).appendingPathComponent((outputFileName as NSString).appendingPathExtension("mov")!)
+//                self.videoURL = URL(string: outputFilePath)
+//                print(self.videoURL)
+//                let outputURL = self.assignedURL()
+                movieFileOutput.startRecording(to: self.assignedURL(), recordingDelegate: self)
                 // Conform to AVCaptureFileOutputRecordingDelegate
-                movieFileOutput.startRecording(to: URL(fileURLWithPath: outputFilePath), recordingDelegate: self)
+//                movieFileOutput.startRecording(to: URL(fileURLWithPath: outputFilePath), recordingDelegate: self)
             } else {
                 movieFileOutput.stopRecording()
             }
@@ -619,7 +620,6 @@ class RecordVideoViewController: UIViewController, AVCaptureFileOutputRecordingD
                         if !success {
                             print("AVCam couldn't save the movie to your photo library: \(String(describing: error))")
                         }
-                        self.videoURL = outputFileURL
                         cleanup()
                     }
                     )
@@ -634,10 +634,9 @@ class RecordVideoViewController: UIViewController, AVCaptureFileOutputRecordingD
         
         // Enable the Camera and Record buttons to let the user switch camera and start another recording.
         DispatchQueue.main.async {
+            // Try to play video from modal
             if self.videoURL != nil {
-                self.prepareVideoForPlayback()
-                self.previewVideoViewWithControls.isHidden = false
-                self.recordVideoButton.isHidden = true
+                self.programmaticPlayback()
             }
             // Only enable the ability to change camera if the device has more than one camera.
             self.chooseCameraButton.isEnabled = self.videoDeviceDiscoverySession.uniqueDevicePositionsCount > 1
@@ -886,50 +885,48 @@ extension AVCaptureDevice.DiscoverySession {
     }
 }
 
-// MARK: VIDEO CONTROLLING
-extension RecordVideoViewController: VideoControlling {
-    var previewVideoView: PreviewVideoView {
-        get {
-            return previewVideoViewWithControls.previewVideoView
-        }
-        set {
-            previewVideoViewWithControls.previewVideoView = newValue
-        }
-    }
-
-    func didTapButton(title: String) {
-        prepareVideoForPlayback()
-        
-        switch title {
-        case PlaybackControls.play:
-            previewVideoView.player?.play()
-            print("play button tapped")
-        case PlaybackControls.pause:
-            previewVideoView.player?.pause()
-            print("pause button tapped")
-        case PlaybackControls.delete:
-            print("delete button tapped")
-        case PlaybackControls.submit:
-            print("submit button tapped")
-        default:
-            print("playback controls button not found")
-        }
-    }
-    
-    func didTapSlider(value: Float) {
-        print("playback controls button not found")
-    }
-}
-
 // MARK: PREPARE VIDEO FOR PLAYBACK
 extension RecordVideoViewController {
-    func prepareVideoForPlayback() {
-            guard let videoURL = videoURL else { return }
-            let asset = AVAsset(url: videoURL)
-            let playerItem = AVPlayerItem(asset: asset)
-            let player = AVPlayer(playerItem: playerItem)
-            previewVideoViewWithControls.previewVideoView.player = player
-            previewVideoViewWithControls.previewVideoView.videoPreviewLayer.videoGravity = .resizeAspectFill
-            // FIXME: TODO - Add durationLabel and timer to preview clip from Video Playback project
-        }
+    func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
+    }
+    
+    func getURLFromDate() -> URL {
+        let dateString = fullStringFor(date: Date())
+        let datePath = getDocumentsDirectory().appendingPathComponent(dateString).appendingPathExtension("mov")
+        return datePath as URL
+    }
+    
+    func assignedURL() -> URL {
+        let outputURL = getURLFromDate()
+        videoURL = outputURL
+        debugPrint("OutputURL: \(String(describing: outputURL))")
+        debugPrint("VideoURL: \(String(describing: videoURL))")
+        return outputURL
+    }
+    
+    
+    func fullStringFor(date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm:ss"
+        var dateString = dateFormatter.string(from: date)
+        dateString = dateString.components(separatedBy: " ")[0]
+        dateString = dateString.replacingOccurrences(of: ":", with: "")
+        return dateString
+    }
+    
+    func programmaticPlayback() {
+        // The blur is just a test for now, put it somewhere smarter and have it respond to the modal being present or not
+        let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.dark)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = view.bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        view.addSubview(blurEffectView)
+        
+        guard (videoURL != nil) else { return }
+        let vc = PreviewVideoViewController()
+        vc.videoURL = videoURL
+        present(vc, animated: true)
+    }
 }

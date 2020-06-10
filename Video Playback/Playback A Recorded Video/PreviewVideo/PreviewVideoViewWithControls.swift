@@ -13,8 +13,8 @@ class PreviewVideoViewWithControls: UIView {
     /*
      ------------------------------------------------
     |                                                |
-    |                            - Duration Label -  | // MARK: TODO - Add this
-    |                                                |
+    |                            - Duration Label -  | // MARK: TODO - Add durationLabel in these controls
+    |                                                | // currently imbedded in another VC
     |            - Preview Video View -              |
     |                                                |
      ------------------------------------------------
