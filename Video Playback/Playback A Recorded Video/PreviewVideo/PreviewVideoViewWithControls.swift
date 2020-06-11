@@ -38,7 +38,7 @@ class PreviewVideoViewWithControls: UIView {
         return previewVideoView
     }()
     
-    private let videoSlider: UISlider = {
+    public let videoSlider: UISlider = {
        let videoSlider = UISlider()
         videoSlider.minimumValue = 0
         videoSlider.maximumValue = 1

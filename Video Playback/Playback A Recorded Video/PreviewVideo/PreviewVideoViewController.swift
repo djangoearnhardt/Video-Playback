@@ -92,7 +92,7 @@ class PreviewVideoViewController: UIViewController {
             // Add an observer to the player to find the current video duration, and have activityIndicator stop animating
             previewVideoView.player?.addObserver(self, forKeyPath: "currentItem.loadedTimeRanges", options: .new, context: nil)
             
-//             Add an observer to the player to track progress in real time
+            // Add an observer to the player to track progress in real time
             let interval = CMTime(value: 1, timescale: 2)
             previewVideoView.player?.addPeriodicTimeObserver(forInterval: interval, queue: DispatchQueue.main, using: { progressTime in
 
@@ -102,12 +102,12 @@ class PreviewVideoViewController: UIViewController {
                 let minutesText = String(format: "%02d", Int(seconds) / 60)
                 self.durationLabel.text = "\(minutesText):\(secondsText)"
 
+                // MARK: TODO: videoSlider progress is really choppy, can I make this smoother
                 // Set the progress slider to follow time
-                // FIXME: get a duration label on this page
-//                if let duration = self.playbackView.player?.currentItem?.duration {
-//                    let durationSeconds = duration.seconds
-
-//                }
+                if let duration = self.previewVideoView.player?.currentItem?.duration {
+                    let durationSeconds = duration.seconds
+                    self.previewVideoViewWithControls.videoSlider.value = (Float(seconds / durationSeconds))
+                }
             })
         }
         
@@ -155,6 +155,14 @@ extension PreviewVideoViewController: VideoControlling {
     }
     
     func didTapSlider(value: Float) {
-        print("playback controls button not found")
+        if let duration = previewVideoView.player?.currentItem?.duration {
+            let totalSeconds = CMTimeGetSeconds(duration)
+            let sliderAndSecondsValue = Float64(value) * totalSeconds // rename this
+            let seekTime = CMTime(value: Int64(sliderAndSecondsValue), timescale: 1)
+            
+            previewVideoView.player?.seek(to: seekTime, completionHandler: { completedSeek in
+                print("completedSeek: \(completedSeek)")
+            })
+        }
     }
 }
