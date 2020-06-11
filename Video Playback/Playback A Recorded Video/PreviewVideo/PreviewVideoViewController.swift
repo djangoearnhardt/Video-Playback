@@ -10,7 +10,7 @@ import AVFoundation
 import UIKit
 
 class PreviewVideoViewController: UIViewController {
-
+    
     // MARK: PROPERTIES
     let previewVideoViewWithControls: PreviewVideoViewWithControls = PreviewVideoViewWithControls()
     var videoURL: URL?
@@ -41,6 +41,12 @@ class PreviewVideoViewController: UIViewController {
         adoptDelegates()
         constructSubviewConstraints()
         setupVideoForPlayback()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(true)
+        // Send notification to dismiss the blur effect
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "modalIsDimissed"), object: nil)
     }
     
     // MARK: HELPER FUNCTIONS
@@ -80,50 +86,50 @@ class PreviewVideoViewController: UIViewController {
             previewVideoViewWithControls.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -Layout.playbackControlBottomMargin)
         ])
     }
-
+    
     func setupVideoForPlayback() {
-            guard let videoURL = videoURL else { return }
-            let asset = AVAsset(url: videoURL)
-            let playerItem = AVPlayerItem(asset: asset)
-            let player = AVPlayer(playerItem: playerItem)
-            previewVideoView.player = player
-            previewVideoView.videoPreviewLayer.videoGravity = .resizeAspect
-
-            // Add an observer to the player to find the current video duration, and have activityIndicator stop animating
-            previewVideoView.player?.addObserver(self, forKeyPath: "currentItem.loadedTimeRanges", options: .new, context: nil)
-            
-            // Add an observer to the player to track progress in real time
-            let interval = CMTime(value: 1, timescale: 2)
-            previewVideoView.player?.addPeriodicTimeObserver(forInterval: interval, queue: DispatchQueue.main, using: { progressTime in
-
-                // Set the progressLabel to track time
-                let seconds = progressTime.seconds
-                let secondsText = String(format: "%02d", Int(seconds) % 60)
-                let minutesText = String(format: "%02d", Int(seconds) / 60)
-                self.durationLabel.text = "\(minutesText):\(secondsText)"
-
-                // MARK: TODO: videoSlider progress is really choppy, can I make this smoother
-                // Set the progress slider to follow time
-                if let duration = self.previewVideoView.player?.currentItem?.duration {
-                    let durationSeconds = duration.seconds
-                    self.previewVideoViewWithControls.videoSlider.value = (Float(seconds / durationSeconds))
-                }
-            })
-        }
+        guard let videoURL = videoURL else { return }
+        let asset = AVAsset(url: videoURL)
+        let playerItem = AVPlayerItem(asset: asset)
+        let player = AVPlayer(playerItem: playerItem)
+        previewVideoView.player = player
+        previewVideoView.videoPreviewLayer.videoGravity = .resizeAspect
         
-        // Add an observer to dismiss the activityIndicatorView when the video is loaded
-        override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-            if keyPath == "currentItem.loadedTimeRanges" {
-                activityIndicatorView.stopAnimating()
-            }
-        }
-
-        func convertToMinutesAndSecondsFrom(_ timeStamp: CMTime) -> String {
-            let seconds = CMTimeGetSeconds(timeStamp) // Convert CMTime to seconds
+        // Add an observer to the player to find the current video duration, and have activityIndicator stop animating
+        previewVideoView.player?.addObserver(self, forKeyPath: "currentItem.loadedTimeRanges", options: .new, context: nil)
+        
+        // Add an observer to the player to track progress in real time
+        let interval = CMTime(value: 1, timescale: 2)
+        previewVideoView.player?.addPeriodicTimeObserver(forInterval: interval, queue: DispatchQueue.main, using: { progressTime in
+            
+            // Set the progressLabel to track time
+            let seconds = progressTime.seconds
             let secondsText = String(format: "%02d", Int(seconds) % 60)
             let minutesText = String(format: "%02d", Int(seconds) / 60)
-            return "\(minutesText):\(secondsText)"
+            self.durationLabel.text = "\(minutesText):\(secondsText)"
+            
+            // MARK: TODO: videoSlider progress is really choppy, can I make this smoother
+            // Set the progress slider to follow time
+            if let duration = self.previewVideoView.player?.currentItem?.duration {
+                let durationSeconds = duration.seconds
+                self.previewVideoViewWithControls.videoSlider.value = (Float(seconds / durationSeconds))
+            }
+        })
+    }
+    
+    // Add an observer to dismiss the activityIndicatorView when the video is loaded
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == "currentItem.loadedTimeRanges" {
+            activityIndicatorView.stopAnimating()
         }
+    }
+    
+    func convertToMinutesAndSecondsFrom(_ timeStamp: CMTime) -> String {
+        let seconds = CMTimeGetSeconds(timeStamp) // Convert CMTime to seconds
+        let secondsText = String(format: "%02d", Int(seconds) % 60)
+        let minutesText = String(format: "%02d", Int(seconds) / 60)
+        return "\(minutesText):\(secondsText)"
+    }
 }
 
 extension PreviewVideoViewController: VideoControlling {
@@ -135,7 +141,7 @@ extension PreviewVideoViewController: VideoControlling {
             previewVideoViewWithControls.previewVideoView = newValue
         }
     }
-
+    
     func didTapButton(title: String) {
         
         switch title {

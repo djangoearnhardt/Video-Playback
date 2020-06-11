@@ -20,9 +20,9 @@ class RecordVideoViewController: UIViewController, AVCaptureFileOutputRecordingD
     @IBOutlet weak var cameraUnavailableLabel: UILabel!
     
     
-    // MARK: OUTLETS: VIDEO PREVIEW
-    let previewVideoViewWithControls: PreviewVideoViewWithControls = PreviewVideoViewWithControls()
+    // MARK: PROPERTIES
     var videoURL: URL? = nil // Set to nil, != nil then we can use videoPreviewViewWithControls' player
+    var previewVideoViewController = PreviewVideoViewController()
     
     enum Layout {
         static let topAndBottomMargin: CGFloat = 35
@@ -57,11 +57,6 @@ class RecordVideoViewController: UIViewController, AVCaptureFileOutputRecordingD
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.addSubview(previewVideoViewWithControls)
-//        previewVideoViewWithControls.previewVideoView.backgroundColor = .orange
-        previewVideoViewWithControls.isHidden = true // Initially true, until video is successfully recorded
-        constructSubviewConstraints()
-
         // Disable UI, enable when the sessions starts running
         chooseCameraButton.isEnabled = false
         recordVideoButton.isEnabled = false
@@ -110,6 +105,13 @@ class RecordVideoViewController: UIViewController, AVCaptureFileOutputRecordingD
             self.spinner.color = UIColor.yellow
             self.recordVideoView.addSubview(self.spinner)
         }
+        
+        // Set up NotificationCenter for modal, to initiate and cancel blueEffect
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(self.handleModalDismissed),
+                                               name: NSNotification.Name(rawValue: "modalIsDimissed"),
+                                               object: nil)
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -203,15 +205,8 @@ class RecordVideoViewController: UIViewController, AVCaptureFileOutputRecordingD
     // MARK: ACTIONS
     
     // MARK: HELPERS
-    func constructSubviewConstraints() {
-        previewVideoViewWithControls.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            previewVideoViewWithControls.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: Layout.topAndBottomMargin), // safeAreaLayoutGuide to account for nav controller
-            previewVideoViewWithControls.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: Layout.leadingAndTrailingMargin),
-            previewVideoViewWithControls.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -Layout.leadingAndTrailingMargin),
-            previewVideoViewWithControls.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -Layout.topAndBottomMargin)
-        ])
+    @objc func handleModalDismissed() {
+        print("Need to handle this")
     }
     
     // MARK: SESSION MANAGEMENT
