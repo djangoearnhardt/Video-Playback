@@ -19,11 +19,11 @@ class RecordVideoViewController: UIViewController, AVCaptureFileOutputRecordingD
     @IBOutlet private weak var resumeButton: UIButton!
     @IBOutlet weak var cameraUnavailableLabel: UILabel!
     
-    
     // MARK: PROPERTIES
     var videoURL: URL? = nil // Set to nil, != nil then we can use videoPreviewViewWithControls' player
     var previewVideoViewController = PreviewVideoViewController()
-    
+    var blurEffectView = UIVisualEffectView()
+
     enum Layout {
         static let topAndBottomMargin: CGFloat = 35
         static let leadingAndTrailingMargin: CGFloat = 35
@@ -206,7 +206,7 @@ class RecordVideoViewController: UIViewController, AVCaptureFileOutputRecordingD
     
     // MARK: HELPERS
     @objc func handleModalDismissed() {
-        print("Need to handle this")
+        removeBlurEffect()
     }
     
     // MARK: SESSION MANAGEMENT
@@ -911,17 +911,26 @@ extension RecordVideoViewController {
         return dateString
     }
     
+    // MARK: NAVIGATION
     func programmaticPlayback() {
-        // The blur is just a test for now, put it somewhere smarter and have it respond to the modal being present or not
-        let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.dark)
-        let blurEffectView = UIVisualEffectView(effect: blurEffect)
-        blurEffectView.frame = view.bounds
-        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        view.addSubview(blurEffectView)
-        
         guard (videoURL != nil) else { return }
         let vc = PreviewVideoViewController()
         vc.videoURL = videoURL
         present(vc, animated: true)
+        addBlurEffect()
+    }
+    
+    func addBlurEffect() {
+        let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.dark)
+        blurEffectView.effect = blurEffect
+        blurEffectView.frame = view.bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        debugPrint(blurEffectView)
+        view.addSubview(blurEffectView)
+    }
+    
+    func removeBlurEffect() {
+        debugPrint(blurEffectView)
+        self.blurEffectView.removeFromSuperview()
     }
 }

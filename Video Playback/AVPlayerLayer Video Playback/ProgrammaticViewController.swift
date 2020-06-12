@@ -143,11 +143,11 @@ class ProgrammaticViewController: UIViewController {
             self.durationLabel.text = "\(minutesText):\(secondsText)"
             
             // Set the progress slider to follow time
-            if let duration = self.playbackView.player?.currentItem?.duration {
-                let durationSeconds = duration.seconds
+//            if let duration = self.playbackView.player?.currentItem?.duration {
+//                let durationSeconds = duration.seconds
                 // FIXME: Delegate slider value to track along with this time. Need to be able to set playbackSlider.value to (Float(seconds / durationSeconds))
 //                sliderthumb? = Float(seconds / durationSeconds)
-            }
+//            }
         })
     }
     
