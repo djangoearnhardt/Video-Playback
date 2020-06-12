@@ -1,4 +1,4 @@
 # Video-Playback
-AVVideo Views and Playback Controls
+iOS Video Playback: Using AVFoundation. 
 
 App Icon by https://www.iconfinder.com/webalys
