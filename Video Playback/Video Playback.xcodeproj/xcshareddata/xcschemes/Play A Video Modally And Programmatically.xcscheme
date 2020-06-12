@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "421B63122479E2AE00D53FB6"
-               BuildableName = "Video Playback.app"
-               BlueprintName = "Video Playback"
+               BlueprintIdentifier = "421B632D2479E3D100D53FB6"
+               BuildableName = "Play A Video Modally And Programmatically.app"
+               BlueprintName = "Play A Video Modally And Programmatically"
                ReferencedContainer = "container:Video Playback.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -44,9 +44,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "421B63122479E2AE00D53FB6"
-            BuildableName = "Video Playback.app"
-            BlueprintName = "Video Playback"
+            BlueprintIdentifier = "421B632D2479E3D100D53FB6"
+            BuildableName = "Play A Video Modally And Programmatically.app"
+            BlueprintName = "Play A Video Modally And Programmatically"
             ReferencedContainer = "container:Video Playback.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -61,9 +61,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "421B63122479E2AE00D53FB6"
-            BuildableName = "Video Playback.app"
-            BlueprintName = "Video Playback"
+            BlueprintIdentifier = "421B632D2479E3D100D53FB6"
+            BuildableName = "Play A Video Modally And Programmatically.app"
+            BlueprintName = "Play A Video Modally And Programmatically"
             ReferencedContainer = "container:Video Playback.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

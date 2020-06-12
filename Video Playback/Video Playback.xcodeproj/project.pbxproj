@@ -56,7 +56,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		421B63132479E2AE00D53FB6 /* Video Playback.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Video Playback.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		421B63132479E2AE00D53FB6 /* Play A Video Proof Of Concept.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Play A Video Proof Of Concept.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		421B63162479E2AE00D53FB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		421B63182479E2AE00D53FB6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		421B631A2479E2AE00D53FB6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,7 +64,7 @@
 		421B631F2479E2B100D53FB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		421B63222479E2B100D53FB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		421B63242479E2B100D53FB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		421B632E2479E3D100D53FB6 /* AVPlayerLayer Video Playback.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AVPlayerLayer Video Playback.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		421B632E2479E3D100D53FB6 /* Play A Video Modally And Programmatically.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Play A Video Modally And Programmatically.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		421B63302479E3D100D53FB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		421B63322479E3D100D53FB6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		421B63372479E3D100D53FB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 		42C11FDA248FDC8F002F3587 /* PreviewVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewVideoViewController.swift; sourceTree = "<group>"; };
 		42D9F0C1248317FD002E7E16 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		42D9F0C9248329A8002E7E16 /* FavoritesViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewDelegate.swift; sourceTree = "<group>"; };
-		42E889E4248B4DCA00A7002E /* Playback A Recorded Video.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Playback A Recorded Video.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		42E889E4248B4DCA00A7002E /* Record A Video And Play It Back.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Record A Video And Play It Back.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		42E889E6248B4DCA00A7002E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42E889E8248B4DCA00A7002E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		42E889ED248B4DCA00A7002E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -137,9 +137,9 @@
 		421B63142479E2AE00D53FB6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				421B63132479E2AE00D53FB6 /* Video Playback.app */,
-				421B632E2479E3D100D53FB6 /* AVPlayerLayer Video Playback.app */,
-				42E889E4248B4DCA00A7002E /* Playback A Recorded Video.app */,
+				421B63132479E2AE00D53FB6 /* Play A Video Proof Of Concept.app */,
+				421B632E2479E3D100D53FB6 /* Play A Video Modally And Programmatically.app */,
+				42E889E4248B4DCA00A7002E /* Record A Video And Play It Back.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -222,9 +222,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		421B63122479E2AE00D53FB6 /* Video Playback */ = {
+		421B63122479E2AE00D53FB6 /* Play A Video Proof Of Concept */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 421B63272479E2B100D53FB6 /* Build configuration list for PBXNativeTarget "Video Playback" */;
+			buildConfigurationList = 421B63272479E2B100D53FB6 /* Build configuration list for PBXNativeTarget "Play A Video Proof Of Concept" */;
 			buildPhases = (
 				421B630F2479E2AE00D53FB6 /* Sources */,
 				421B63102479E2AE00D53FB6 /* Frameworks */,
@@ -234,14 +234,14 @@
 			);
 			dependencies = (
 			);
-			name = "Video Playback";
+			name = "Play A Video Proof Of Concept";
 			productName = "Video Playback";
-			productReference = 421B63132479E2AE00D53FB6 /* Video Playback.app */;
+			productReference = 421B63132479E2AE00D53FB6 /* Play A Video Proof Of Concept.app */;
 			productType = "com.apple.product-type.application";
 		};
-		421B632D2479E3D100D53FB6 /* AVPlayerLayer Video Playback */ = {
+		421B632D2479E3D100D53FB6 /* Play A Video Modally And Programmatically */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 421B633F2479E3D400D53FB6 /* Build configuration list for PBXNativeTarget "AVPlayerLayer Video Playback" */;
+			buildConfigurationList = 421B633F2479E3D400D53FB6 /* Build configuration list for PBXNativeTarget "Play A Video Modally And Programmatically" */;
 			buildPhases = (
 				421B632A2479E3D100D53FB6 /* Sources */,
 				421B632B2479E3D100D53FB6 /* Frameworks */,
@@ -251,14 +251,14 @@
 			);
 			dependencies = (
 			);
-			name = "AVPlayerLayer Video Playback";
+			name = "Play A Video Modally And Programmatically";
 			productName = "AVPlayerLayer Video Playback";
-			productReference = 421B632E2479E3D100D53FB6 /* AVPlayerLayer Video Playback.app */;
+			productReference = 421B632E2479E3D100D53FB6 /* Play A Video Modally And Programmatically.app */;
 			productType = "com.apple.product-type.application";
 		};
-		42E889E3248B4DCA00A7002E /* Playback A Recorded Video */ = {
+		42E889E3248B4DCA00A7002E /* Record A Video And Play It Back */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 42E889F7248B4DCF00A7002E /* Build configuration list for PBXNativeTarget "Playback A Recorded Video" */;
+			buildConfigurationList = 42E889F7248B4DCF00A7002E /* Build configuration list for PBXNativeTarget "Record A Video And Play It Back" */;
 			buildPhases = (
 				42E889E0248B4DCA00A7002E /* Sources */,
 				42E889E1248B4DCA00A7002E /* Frameworks */,
@@ -268,9 +268,9 @@
 			);
 			dependencies = (
 			);
-			name = "Playback A Recorded Video";
+			name = "Record A Video And Play It Back";
 			productName = "Playback A Recorded Video";
-			productReference = 42E889E4248B4DCA00A7002E /* Playback A Recorded Video.app */;
+			productReference = 42E889E4248B4DCA00A7002E /* Record A Video And Play It Back.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -307,9 +307,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				421B63122479E2AE00D53FB6 /* Video Playback */,
-				421B632D2479E3D100D53FB6 /* AVPlayerLayer Video Playback */,
-				42E889E3248B4DCA00A7002E /* Playback A Recorded Video */,
+				421B63122479E2AE00D53FB6 /* Play A Video Proof Of Concept */,
+				421B632D2479E3D100D53FB6 /* Play A Video Modally And Programmatically */,
+				42E889E3248B4DCA00A7002E /* Record A Video And Play It Back */,
 			);
 		};
 /* End PBXProject section */
@@ -700,7 +700,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		421B63272479E2B100D53FB6 /* Build configuration list for PBXNativeTarget "Video Playback" */ = {
+		421B63272479E2B100D53FB6 /* Build configuration list for PBXNativeTarget "Play A Video Proof Of Concept" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				421B63282479E2B100D53FB6 /* Debug */,
@@ -709,7 +709,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		421B633F2479E3D400D53FB6 /* Build configuration list for PBXNativeTarget "AVPlayerLayer Video Playback" */ = {
+		421B633F2479E3D400D53FB6 /* Build configuration list for PBXNativeTarget "Play A Video Modally And Programmatically" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				421B63402479E3D400D53FB6 /* Debug */,
@@ -718,7 +718,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		42E889F7248B4DCF00A7002E /* Build configuration list for PBXNativeTarget "Playback A Recorded Video" */ = {
+		42E889F7248B4DCF00A7002E /* Build configuration list for PBXNativeTarget "Record A Video And Play It Back" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				42E889F5248B4DCF00A7002E /* Debug */,
