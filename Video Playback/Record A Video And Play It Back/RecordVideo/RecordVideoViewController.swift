@@ -615,15 +615,15 @@ class RecordVideoViewController: UIViewController, AVCaptureFileOutputRecordingD
                         if !success {
                             print("AVCam couldn't save the movie to your photo library: \(String(describing: error))")
                         }
-                        cleanup()
+//                        cleanup()
                     }
                     )
                 } else {
-                    cleanup()
+//                    cleanup()
                 }
             }
         } else {
-            cleanup()
+//            cleanup()
         }
         
         
@@ -896,8 +896,6 @@ extension RecordVideoViewController {
     func assignedURL() -> URL {
         let outputURL = getURLFromDate()
         videoURL = outputURL
-        debugPrint("OutputURL: \(String(describing: outputURL))")
-        debugPrint("VideoURL: \(String(describing: videoURL))")
         return outputURL
     }
     

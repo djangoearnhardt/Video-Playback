@@ -21,7 +21,31 @@
 		421B63432479E43E00D53FB6 /* PlaybackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421B63422479E43E00D53FB6 /* PlaybackView.swift */; };
 		421B6345247A0FDD00D53FB6 /* PlayVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421B6344247A0FDD00D53FB6 /* PlayVideoViewController.swift */; };
 		423F6BE5247D5A22003D446B /* PlaybackSliderControlDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423F6BE4247D5A22003D446B /* PlaybackSliderControlDelegate.swift */; };
+		4284DAFA2493C11900BAEA58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4284DAF92493C11900BAEA58 /* AppDelegate.swift */; };
+		4284DAFC2493C11900BAEA58 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4284DAFB2493C11900BAEA58 /* SceneDelegate.swift */; };
+		4284DAFE2493C11900BAEA58 /* CKRecordVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4284DAFD2493C11900BAEA58 /* CKRecordVideoViewController.swift */; };
+		4284DB012493C11900BAEA58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4284DAFF2493C11900BAEA58 /* Main.storyboard */; };
+		4284DB032493C11D00BAEA58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4284DB022493C11D00BAEA58 /* Assets.xcassets */; };
+		4284DB062493C11D00BAEA58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4284DB042493C11D00BAEA58 /* LaunchScreen.storyboard */; };
+		4284DB0F2493C2AD00BAEA58 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4284DB0C2493C1A200BAEA58 /* CloudKit.framework */; };
+		4284DB122493C3B700BAEA58 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4284DB112493C3B700BAEA58 /* Video.swift */; };
+		4284DB172493C5BA00BAEA58 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4284DB162493C5BA00BAEA58 /* Result.swift */; };
+		4284DB192493CAB100BAEA58 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4284DB182493CAB100BAEA58 /* Constants.swift */; };
 		429446C6248C6BA3007D6CFF /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429446C5248C6BA3007D6CFF /* UIButtonExtension.swift */; };
+		42A326C92496BC820011BFA8 /* VideoRecordingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A326C82496BC820011BFA8 /* VideoRecordingController.swift */; };
+		42A326CC2496CB340011BFA8 /* RecordVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E889FD248B4EA100A7002E /* RecordVideoView.swift */; };
+		42A326CD2496CB370011BFA8 /* RecordVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E889FB248B4E8B00A7002E /* RecordVideoViewController.swift */; };
+		42A326CE2496CB3B0011BFA8 /* PreviewVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E88A00248B4F5000A7002E /* PreviewVideoView.swift */; };
+		42A326CF2496CB3E0011BFA8 /* PreviewVideoViewWithControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E88A02248B500C00A7002E /* PreviewVideoViewWithControls.swift */; };
+		42A326D02496CB400011BFA8 /* PreviewVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C11FDA248FDC8F002F3587 /* PreviewVideoViewController.swift */; };
+		42A326D12496CB430011BFA8 /* VideoControlling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E88A04248B50C200A7002E /* VideoControlling.swift */; };
+		42A326D22496CB460011BFA8 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429446C5248C6BA3007D6CFF /* UIButtonExtension.swift */; };
+		42A326D32496CB670011BFA8 /* PlaybackControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F68EAE247C45350092100D /* PlaybackControls.swift */; };
+		42A326D52497AF720011BFA8 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4284DB112493C3B700BAEA58 /* Video.swift */; };
+		42A326D62497AF830011BFA8 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4284DB162493C5BA00BAEA58 /* Result.swift */; };
+		42A326D72497AF870011BFA8 /* VideoRecordingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A326C82496BC820011BFA8 /* VideoRecordingController.swift */; };
+		42A326D82497AFA90011BFA8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4284DB182493CAB100BAEA58 /* Constants.swift */; };
+		42B8DB3A24A00A8600D0BF76 /* sampleVideo.mov in Resources */ = {isa = PBXBuildFile; fileRef = 42B8DB3924A00A8600D0BF76 /* sampleVideo.mov */; };
 		42C11FD1248FDA57002F3587 /* ProgrammaticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F68EA8247B3CAF0092100D /* ProgrammaticViewController.swift */; };
 		42C11FD2248FDAAC002F3587 /* PlaybackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421B63422479E43E00D53FB6 /* PlaybackView.swift */; };
 		42C11FD3248FDAAE002F3587 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D9F0C1248317FD002E7E16 /* FavoritesView.swift */; };
@@ -74,7 +98,22 @@
 		421B63422479E43E00D53FB6 /* PlaybackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackView.swift; sourceTree = "<group>"; };
 		421B6344247A0FDD00D53FB6 /* PlayVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayVideoViewController.swift; sourceTree = "<group>"; };
 		423F6BE4247D5A22003D446B /* PlaybackSliderControlDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSliderControlDelegate.swift; sourceTree = "<group>"; };
+		4284DAF72493C11900BAEA58 /* Send A Video To CloudKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Send A Video To CloudKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4284DAF92493C11900BAEA58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4284DAFB2493C11900BAEA58 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4284DAFD2493C11900BAEA58 /* CKRecordVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKRecordVideoViewController.swift; sourceTree = "<group>"; };
+		4284DB002493C11900BAEA58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4284DB022493C11D00BAEA58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4284DB052493C11D00BAEA58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4284DB072493C11D00BAEA58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4284DB0C2493C1A200BAEA58 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		4284DB0E2493C2A800BAEA58 /* Send A Video To CloudKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Send A Video To CloudKit.entitlements"; sourceTree = "<group>"; };
+		4284DB112493C3B700BAEA58 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		4284DB162493C5BA00BAEA58 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		4284DB182493CAB100BAEA58 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		429446C5248C6BA3007D6CFF /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		42A326C82496BC820011BFA8 /* VideoRecordingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRecordingController.swift; sourceTree = "<group>"; };
+		42B8DB3924A00A8600D0BF76 /* sampleVideo.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = sampleVideo.mov; path = ../../../../../Desktop/sampleVideo.mov; sourceTree = "<group>"; };
 		42C11FDA248FDC8F002F3587 /* PreviewVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewVideoViewController.swift; sourceTree = "<group>"; };
 		42D9F0C1248317FD002E7E16 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		42D9F0C9248329A8002E7E16 /* FavoritesViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +153,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4284DAF42493C11900BAEA58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4284DB0F2493C2AD00BAEA58 /* CloudKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		42E889E1248B4DCA00A7002E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -127,10 +174,12 @@
 		421B630A2479E2AE00D53FB6 = {
 			isa = PBXGroup;
 			children = (
-				421B63152479E2AE00D53FB6 /* Video Playback */,
-				421B632F2479E3D100D53FB6 /* AVPlayerLayer Video Playback */,
-				42E889E5248B4DCA00A7002E /* Playback A Recorded Video */,
+				421B63152479E2AE00D53FB6 /* Play A Video Proof Of Concept */,
+				421B632F2479E3D100D53FB6 /* Play A Video Modally and Programmatically */,
+				42E889E5248B4DCA00A7002E /* Record A Video And Play It Back */,
+				4284DAF82493C11900BAEA58 /* Send A Video To CloudKit */,
 				421B63142479E2AE00D53FB6 /* Products */,
+				4284DB0B2493C1A200BAEA58 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,11 +189,12 @@
 				421B63132479E2AE00D53FB6 /* Play A Video Proof Of Concept.app */,
 				421B632E2479E3D100D53FB6 /* Play A Video Modally And Programmatically.app */,
 				42E889E4248B4DCA00A7002E /* Record A Video And Play It Back.app */,
+				4284DAF72493C11900BAEA58 /* Send A Video To CloudKit.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		421B63152479E2AE00D53FB6 /* Video Playback */ = {
+		421B63152479E2AE00D53FB6 /* Play A Video Proof Of Concept */ = {
 			isa = PBXGroup;
 			children = (
 				421B63162479E2AE00D53FB6 /* AppDelegate.swift */,
@@ -155,10 +205,10 @@
 				421B63212479E2B100D53FB6 /* LaunchScreen.storyboard */,
 				421B63242479E2B100D53FB6 /* Info.plist */,
 			);
-			path = "Video Playback";
+			path = "Play A Video Proof Of Concept";
 			sourceTree = "<group>";
 		};
-		421B632F2479E3D100D53FB6 /* AVPlayerLayer Video Playback */ = {
+		421B632F2479E3D100D53FB6 /* Play A Video Modally and Programmatically */ = {
 			isa = PBXGroup;
 			children = (
 				421B63302479E3D100D53FB6 /* AppDelegate.swift */,
@@ -180,10 +230,70 @@
 				421B633B2479E3D400D53FB6 /* LaunchScreen.storyboard */,
 				421B633E2479E3D400D53FB6 /* Info.plist */,
 			);
-			path = "AVPlayerLayer Video Playback";
+			path = "Play A Video Modally and Programmatically";
 			sourceTree = "<group>";
 		};
-		42E889E5248B4DCA00A7002E /* Playback A Recorded Video */ = {
+		4284DAF82493C11900BAEA58 /* Send A Video To CloudKit */ = {
+			isa = PBXGroup;
+			children = (
+				4284DB0E2493C2A800BAEA58 /* Send A Video To CloudKit.entitlements */,
+				4284DAF92493C11900BAEA58 /* AppDelegate.swift */,
+				4284DAFB2493C11900BAEA58 /* SceneDelegate.swift */,
+				4284DAFD2493C11900BAEA58 /* CKRecordVideoViewController.swift */,
+				4284DB102493C3A400BAEA58 /* Video */,
+				42B8DB3924A00A8600D0BF76 /* sampleVideo.mov */,
+				4284DB182493CAB100BAEA58 /* Constants.swift */,
+				4284DAFF2493C11900BAEA58 /* Main.storyboard */,
+				4284DB022493C11D00BAEA58 /* Assets.xcassets */,
+				4284DB042493C11D00BAEA58 /* LaunchScreen.storyboard */,
+				4284DB072493C11D00BAEA58 /* Info.plist */,
+			);
+			path = "Send A Video To CloudKit";
+			sourceTree = "<group>";
+		};
+		4284DB0B2493C1A200BAEA58 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4284DB0C2493C1A200BAEA58 /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4284DB102493C3A400BAEA58 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				4284DB112493C3B700BAEA58 /* Video.swift */,
+				4284DB132493C50500BAEA58 /* Model */,
+				4284DB152493C51000BAEA58 /* Model Controller */,
+				4284DB142493C50B00BAEA58 /* Mock */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		4284DB132493C50500BAEA58 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4284DB162493C5BA00BAEA58 /* Result.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4284DB142493C50B00BAEA58 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		4284DB152493C51000BAEA58 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				42A326C82496BC820011BFA8 /* VideoRecordingController.swift */,
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		42E889E5248B4DCA00A7002E /* Record A Video And Play It Back */ = {
 			isa = PBXGroup;
 			children = (
 				42E889F8248B4E3D00A7002E /* RecordVideo */,
@@ -196,7 +306,7 @@
 				42E889F1248B4DCF00A7002E /* LaunchScreen.storyboard */,
 				42E889F4248B4DCF00A7002E /* Info.plist */,
 			);
-			path = "Playback A Recorded Video";
+			path = "Record A Video And Play It Back";
 			sourceTree = "<group>";
 		};
 		42E889F8248B4E3D00A7002E /* RecordVideo */ = {
@@ -256,6 +366,23 @@
 			productReference = 421B632E2479E3D100D53FB6 /* Play A Video Modally And Programmatically.app */;
 			productType = "com.apple.product-type.application";
 		};
+		4284DAF62493C11900BAEA58 /* Send A Video To CloudKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4284DB082493C11D00BAEA58 /* Build configuration list for PBXNativeTarget "Send A Video To CloudKit" */;
+			buildPhases = (
+				4284DAF32493C11900BAEA58 /* Sources */,
+				4284DAF42493C11900BAEA58 /* Frameworks */,
+				4284DAF52493C11900BAEA58 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Send A Video To CloudKit";
+			productName = "Send A Video To CloudKit";
+			productReference = 4284DAF72493C11900BAEA58 /* Send A Video To CloudKit.app */;
+			productType = "com.apple.product-type.application";
+		};
 		42E889E3248B4DCA00A7002E /* Record A Video And Play It Back */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 42E889F7248B4DCF00A7002E /* Build configuration list for PBXNativeTarget "Record A Video And Play It Back" */;
@@ -289,6 +416,9 @@
 					421B632D2479E3D100D53FB6 = {
 						CreatedOnToolsVersion = 11.5;
 					};
+					4284DAF62493C11900BAEA58 = {
+						CreatedOnToolsVersion = 11.5;
+					};
 					42E889E3248B4DCA00A7002E = {
 						CreatedOnToolsVersion = 11.5;
 					};
@@ -310,6 +440,7 @@
 				421B63122479E2AE00D53FB6 /* Play A Video Proof Of Concept */,
 				421B632D2479E3D100D53FB6 /* Play A Video Modally And Programmatically */,
 				42E889E3248B4DCA00A7002E /* Record A Video And Play It Back */,
+				4284DAF62493C11900BAEA58 /* Send A Video To CloudKit */,
 			);
 		};
 /* End PBXProject section */
@@ -332,6 +463,17 @@
 				421B633D2479E3D400D53FB6 /* LaunchScreen.storyboard in Resources */,
 				421B633A2479E3D400D53FB6 /* Assets.xcassets in Resources */,
 				421B63382479E3D100D53FB6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4284DAF52493C11900BAEA58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42B8DB3A24A00A8600D0BF76 /* sampleVideo.mov in Resources */,
+				4284DB062493C11D00BAEA58 /* LaunchScreen.storyboard in Resources */,
+				4284DB032493C11D00BAEA58 /* Assets.xcassets in Resources */,
+				4284DB012493C11900BAEA58 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +522,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4284DAF32493C11900BAEA58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4284DAFE2493C11900BAEA58 /* CKRecordVideoViewController.swift in Sources */,
+				42A326CD2496CB370011BFA8 /* RecordVideoViewController.swift in Sources */,
+				42A326D12496CB430011BFA8 /* VideoControlling.swift in Sources */,
+				42A326CC2496CB340011BFA8 /* RecordVideoView.swift in Sources */,
+				42A326C92496BC820011BFA8 /* VideoRecordingController.swift in Sources */,
+				4284DB122493C3B700BAEA58 /* Video.swift in Sources */,
+				42A326CE2496CB3B0011BFA8 /* PreviewVideoView.swift in Sources */,
+				42A326D02496CB400011BFA8 /* PreviewVideoViewController.swift in Sources */,
+				4284DAFA2493C11900BAEA58 /* AppDelegate.swift in Sources */,
+				42A326D32496CB670011BFA8 /* PlaybackControls.swift in Sources */,
+				4284DAFC2493C11900BAEA58 /* SceneDelegate.swift in Sources */,
+				4284DB172493C5BA00BAEA58 /* Result.swift in Sources */,
+				42A326D22496CB460011BFA8 /* UIButtonExtension.swift in Sources */,
+				4284DB192493CAB100BAEA58 /* Constants.swift in Sources */,
+				42A326CF2496CB3E0011BFA8 /* PreviewVideoViewWithControls.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		42E889E0248B4DCA00A7002E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -390,9 +554,11 @@
 				42C11FD9248FDABD002F3587 /* VideoPlaybackControlsFavoritesDelegate.swift in Sources */,
 				42E889FC248B4E8B00A7002E /* RecordVideoViewController.swift in Sources */,
 				42E88A05248B50C200A7002E /* VideoControlling.swift in Sources */,
+				42A326D82497AFA90011BFA8 /* Constants.swift in Sources */,
 				42E88A03248B500C00A7002E /* PreviewVideoViewWithControls.swift in Sources */,
 				42C11FD1248FDA57002F3587 /* ProgrammaticViewController.swift in Sources */,
 				42C11FD8248FDABD002F3587 /* VideoPlaybackControlsDelegate.swift in Sources */,
+				42A326D52497AF720011BFA8 /* Video.swift in Sources */,
 				42C11FD7248FDABD002F3587 /* VideoPlaybackControlsView.swift in Sources */,
 				42C11FD4248FDAB1002F3587 /* FavoritesViewDelegate.swift in Sources */,
 				42E889E7248B4DCA00A7002E /* AppDelegate.swift in Sources */,
@@ -401,8 +567,10 @@
 				429446C6248C6BA3007D6CFF /* UIButtonExtension.swift in Sources */,
 				42C11FD3248FDAAE002F3587 /* FavoritesView.swift in Sources */,
 				42E88A06248B541400A7002E /* PlaybackControls.swift in Sources */,
+				42A326D62497AF830011BFA8 /* Result.swift in Sources */,
 				42E889E9248B4DCA00A7002E /* SceneDelegate.swift in Sources */,
 				42E889FE248B4EA100A7002E /* RecordVideoView.swift in Sources */,
+				42A326D72497AF870011BFA8 /* VideoRecordingController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +605,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				421B633C2479E3D400D53FB6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		4284DAFF2493C11900BAEA58 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4284DB002493C11900BAEA58 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4284DB042493C11D00BAEA58 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4284DB052493C11D00BAEA58 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -580,7 +764,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UR48EZC8Y4;
-				INFOPLIST_FILE = "Video Playback/Info.plist";
+				INFOPLIST_FILE = "Play A Video Proof Of Concept/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -599,7 +783,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UR48EZC8Y4;
-				INFOPLIST_FILE = "Video Playback/Info.plist";
+				INFOPLIST_FILE = "Play A Video Proof Of Concept/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -618,7 +802,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UR48EZC8Y4;
-				INFOPLIST_FILE = "AVPlayerLayer Video Playback/Info.plist";
+				INFOPLIST_FILE = "Play A Video Modally And Programmatically/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -637,7 +821,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UR48EZC8Y4;
-				INFOPLIST_FILE = "AVPlayerLayer Video Playback/Info.plist";
+				INFOPLIST_FILE = "Play A Video Modally And Programmatically/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -650,13 +834,51 @@
 			};
 			name = Release;
 		};
+		4284DB092493C11D00BAEA58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Send A Video To CloudKit/Send A Video To CloudKit.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UR48EZC8Y4;
+				INFOPLIST_FILE = "Send A Video To CloudKit/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.djangoearnhardt.Send-A-Video-To-CloudKit";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4284DB0A2493C11D00BAEA58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Send A Video To CloudKit/Send A Video To CloudKit.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UR48EZC8Y4;
+				INFOPLIST_FILE = "Send A Video To CloudKit/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.djangoearnhardt.Send-A-Video-To-CloudKit";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		42E889F5248B4DCF00A7002E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UR48EZC8Y4;
-				INFOPLIST_FILE = "Playback A Recorded Video/Info.plist";
+				INFOPLIST_FILE = "Record A Video And Play It Back/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -675,7 +897,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UR48EZC8Y4;
-				INFOPLIST_FILE = "Playback A Recorded Video/Info.plist";
+				INFOPLIST_FILE = "Record A Video And Play It Back/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -714,6 +936,15 @@
 			buildConfigurations = (
 				421B63402479E3D400D53FB6 /* Debug */,
 				421B63412479E3D400D53FB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4284DB082493C11D00BAEA58 /* Build configuration list for PBXNativeTarget "Send A Video To CloudKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4284DB092493C11D00BAEA58 /* Debug */,
+				4284DB0A2493C11D00BAEA58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -7,6 +7,8 @@
 //
 
 import AVFoundation
+import CloudKit
+import Photos
 import UIKit
 
 class PreviewVideoViewController: UIViewController {
@@ -147,14 +149,21 @@ extension PreviewVideoViewController: VideoControlling {
         switch title {
         case PlaybackControls.play:
             previewVideoView.player?.play()
-            print("play button tapped")
         case PlaybackControls.pause:
             previewVideoView.player?.pause()
-            print("pause button tapped")
         case PlaybackControls.delete:
             print("delete button tapped")
         case PlaybackControls.submit:
-            print("submit button tapped")
+            guard let videoURL = VideoRecordingController.sharedInstance.videoURL else { return }
+            let videoAsset = CKAsset(fileURL: videoURL)
+            let video = Video.Result(name: "TestVideo", videoAsset: videoAsset)
+            PHPhotoLibrary.requestAuthorization { status in
+                if status == .authorized {
+                    VideoRecordingController.sharedInstance.save(video: video) { (result) in
+                        self.cleanup(videoURL: videoURL)
+                    }
+                }
+            }
         default:
             print("playback controls button not found")
         }
@@ -169,6 +178,21 @@ extension PreviewVideoViewController: VideoControlling {
             previewVideoView.player?.seek(to: seekTime, completionHandler: { completedSeek in
                 print("completedSeek: \(completedSeek)")
             })
+        }
+    }
+}
+
+// MARK: CLEANUP
+extension PreviewVideoViewController {
+    func cleanup(videoURL: URL) {
+        let path = videoURL.path
+        if FileManager.default.fileExists(atPath: path) {
+            do {
+                try FileManager.default.removeItem(atPath: path)
+                debugPrint("File Manager removed item atPath: \(path)")
+            } catch {
+                print("Could not remove file at url: \(videoURL)")
+            }
         }
     }
 }

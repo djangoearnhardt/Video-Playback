@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h9H-fl-ShA">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Record Video View Controller-->
+        <scene sceneID="Tpd-GA-RCI">
+            <objects>
+                <viewController id="h9H-fl-ShA" customClass="CKRecordVideoViewController" customModule="Send_A_Video_To_CloudKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nx7-7X-VSv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fzn-3o-jqO" customClass="RecordVideoView" customModule="Send_A_Video_To_CloudKit" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="prs-Qd-sqD">
+                                        <rect key="frame" x="339" y="25" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="BDW-xq-T5i"/>
+                                            <constraint firstAttribute="height" constant="50" id="ZcY-J0-0M0"/>
+                                            <constraint firstAttribute="width" secondItem="prs-Qd-sqD" secondAttribute="height" multiplier="1:1" id="awn-va-E2Y"/>
+                                        </constraints>
+                                        <state key="normal" image="camera.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="changeCamera:" destination="h9H-fl-ShA" eventType="touchUpInside" id="yrF-Ke-rif"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r04-Oo-x8F">
+                                        <rect key="frame" x="182" y="733" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="6lU-Ea-UsL"/>
+                                            <constraint firstAttribute="height" constant="50" id="Vfm-Um-otK"/>
+                                            <constraint firstAttribute="width" secondItem="r04-Oo-x8F" secondAttribute="height" multiplier="1:1" id="vPe-Sn-iu5"/>
+                                        </constraints>
+                                        <state key="normal" image="video.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="toggleMovieRecording:" destination="h9H-fl-ShA" eventType="touchUpInside" id="jCw-0z-1pH"/>
+                                        </connections>
+                                    </button>
+                                    <label hidden="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camera Unavailable" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kub-OV-PYQ">
+                                        <rect key="frame" x="131" y="398.5" width="152" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cNZ-8t-naE">
+                                        <rect key="frame" x="186" y="394" width="46" height="30"/>
+                                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Resume"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="prs-Qd-sqD" firstAttribute="top" secondItem="fzn-3o-jqO" secondAttribute="top" constant="25" id="6UA-ff-7gp"/>
+                                    <constraint firstAttribute="trailing" secondItem="prs-Qd-sqD" secondAttribute="trailing" constant="25" id="GKK-49-ho6"/>
+                                    <constraint firstItem="kub-OV-PYQ" firstAttribute="centerX" secondItem="fzn-3o-jqO" secondAttribute="centerX" id="NhQ-GD-21Z"/>
+                                    <constraint firstItem="kub-OV-PYQ" firstAttribute="centerY" secondItem="fzn-3o-jqO" secondAttribute="centerY" id="ay1-zp-h7a"/>
+                                    <constraint firstAttribute="bottom" secondItem="r04-Oo-x8F" secondAttribute="bottom" constant="35" id="c69-hh-cwD"/>
+                                    <constraint firstItem="cNZ-8t-naE" firstAttribute="centerY" secondItem="fzn-3o-jqO" secondAttribute="centerYWithinMargins" id="p6W-6Q-arU"/>
+                                    <constraint firstItem="cNZ-8t-naE" firstAttribute="centerX" secondItem="fzn-3o-jqO" secondAttribute="centerXWithinMargins" id="x7q-l2-azw"/>
+                                    <constraint firstItem="r04-Oo-x8F" firstAttribute="centerX" secondItem="fzn-3o-jqO" secondAttribute="centerX" id="ycB-ex-tJ4"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="s47-uo-fdX" firstAttribute="trailing" secondItem="fzn-3o-jqO" secondAttribute="trailing" id="IcS-gQ-3oQ"/>
+                            <constraint firstItem="fzn-3o-jqO" firstAttribute="top" secondItem="s47-uo-fdX" secondAttribute="top" id="S9B-PI-Xgo"/>
+                            <constraint firstItem="s47-uo-fdX" firstAttribute="bottom" secondItem="fzn-3o-jqO" secondAttribute="bottom" id="Zqh-rL-P4b"/>
+                            <constraint firstItem="fzn-3o-jqO" firstAttribute="leading" secondItem="s47-uo-fdX" secondAttribute="leading" id="grW-71-Gz6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="s47-uo-fdX"/>
+                    </view>
+                    <connections>
+                        <outlet property="cameraUnavailableLabel" destination="kub-OV-PYQ" id="Ziq-ae-erC"/>
+                        <outlet property="chooseCameraButton" destination="prs-Qd-sqD" id="8L6-zK-J4r"/>
+                        <outlet property="recordVideoButton" destination="r04-Oo-x8F" id="sPX-GX-UKA"/>
+                        <outlet property="recordVideoView" destination="fzn-3o-jqO" id="qcQ-XJ-Td3"/>
+                        <outlet property="resumeButton" destination="cNZ-8t-naE" id="eJO-xk-gCm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zgY-7a-Z2c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="106" y="75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera.fill" catalog="system" width="128" height="96"/>
+        <image name="video.fill" catalog="system" width="128" height="82"/>
+    </resources>
+</document>
