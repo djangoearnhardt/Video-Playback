@@ -53,13 +53,27 @@
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Resume"/>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ox9-MO-0EA">
+                                        <rect key="frame" x="25" y="25" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Ox9-MO-0EA" secondAttribute="height" multiplier="1:1" id="SdA-6b-geP"/>
+                                            <constraint firstAttribute="height" constant="50" id="X0f-Ii-7LR"/>
+                                            <constraint firstAttribute="width" constant="50" id="pbS-Z3-u6L"/>
+                                        </constraints>
+                                        <state key="normal" image="icloud.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="iCloudButtonTapped:" destination="h9H-fl-ShA" eventType="touchUpInside" id="pbt-nB-70h"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="Ox9-MO-0EA" firstAttribute="leading" secondItem="fzn-3o-jqO" secondAttribute="leading" constant="25" id="2sd-sv-RMR"/>
                                     <constraint firstItem="prs-Qd-sqD" firstAttribute="top" secondItem="fzn-3o-jqO" secondAttribute="top" constant="25" id="6UA-ff-7gp"/>
                                     <constraint firstAttribute="trailing" secondItem="prs-Qd-sqD" secondAttribute="trailing" constant="25" id="GKK-49-ho6"/>
                                     <constraint firstItem="kub-OV-PYQ" firstAttribute="centerX" secondItem="fzn-3o-jqO" secondAttribute="centerX" id="NhQ-GD-21Z"/>
+                                    <constraint firstItem="Ox9-MO-0EA" firstAttribute="top" secondItem="fzn-3o-jqO" secondAttribute="top" constant="25" id="QUb-RN-BKW"/>
                                     <constraint firstItem="kub-OV-PYQ" firstAttribute="centerY" secondItem="fzn-3o-jqO" secondAttribute="centerY" id="ay1-zp-h7a"/>
                                     <constraint firstAttribute="bottom" secondItem="r04-Oo-x8F" secondAttribute="bottom" constant="35" id="c69-hh-cwD"/>
                                     <constraint firstItem="cNZ-8t-naE" firstAttribute="centerY" secondItem="fzn-3o-jqO" secondAttribute="centerYWithinMargins" id="p6W-6Q-arU"/>
@@ -80,6 +94,7 @@
                     <connections>
                         <outlet property="cameraUnavailableLabel" destination="kub-OV-PYQ" id="Ziq-ae-erC"/>
                         <outlet property="chooseCameraButton" destination="prs-Qd-sqD" id="8L6-zK-J4r"/>
+                        <outlet property="iCloudButton" destination="Ox9-MO-0EA" id="BWc-Z7-udD"/>
                         <outlet property="recordVideoButton" destination="r04-Oo-x8F" id="sPX-GX-UKA"/>
                         <outlet property="recordVideoView" destination="fzn-3o-jqO" id="qcQ-XJ-Td3"/>
                         <outlet property="resumeButton" destination="cNZ-8t-naE" id="eJO-xk-gCm"/>
@@ -92,6 +107,7 @@
     </scenes>
     <resources>
         <image name="camera.fill" catalog="system" width="128" height="96"/>
+        <image name="icloud.fill" catalog="system" width="128" height="88"/>
         <image name="video.fill" catalog="system" width="128" height="82"/>
     </resources>
 </document>

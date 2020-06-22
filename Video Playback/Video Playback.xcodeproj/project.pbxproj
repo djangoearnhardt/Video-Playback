@@ -45,7 +45,6 @@
 		42A326D62497AF830011BFA8 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4284DB162493C5BA00BAEA58 /* Result.swift */; };
 		42A326D72497AF870011BFA8 /* VideoRecordingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A326C82496BC820011BFA8 /* VideoRecordingController.swift */; };
 		42A326D82497AFA90011BFA8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4284DB182493CAB100BAEA58 /* Constants.swift */; };
-		42B8DB3A24A00A8600D0BF76 /* sampleVideo.mov in Resources */ = {isa = PBXBuildFile; fileRef = 42B8DB3924A00A8600D0BF76 /* sampleVideo.mov */; };
 		42C11FD1248FDA57002F3587 /* ProgrammaticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F68EA8247B3CAF0092100D /* ProgrammaticViewController.swift */; };
 		42C11FD2248FDAAC002F3587 /* PlaybackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421B63422479E43E00D53FB6 /* PlaybackView.swift */; };
 		42C11FD3248FDAAE002F3587 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D9F0C1248317FD002E7E16 /* FavoritesView.swift */; };
@@ -113,7 +112,6 @@
 		4284DB182493CAB100BAEA58 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		429446C5248C6BA3007D6CFF /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		42A326C82496BC820011BFA8 /* VideoRecordingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRecordingController.swift; sourceTree = "<group>"; };
-		42B8DB3924A00A8600D0BF76 /* sampleVideo.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = sampleVideo.mov; path = ../../../../../Desktop/sampleVideo.mov; sourceTree = "<group>"; };
 		42C11FDA248FDC8F002F3587 /* PreviewVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewVideoViewController.swift; sourceTree = "<group>"; };
 		42D9F0C1248317FD002E7E16 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		42D9F0C9248329A8002E7E16 /* FavoritesViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewDelegate.swift; sourceTree = "<group>"; };
@@ -241,7 +239,6 @@
 				4284DAFB2493C11900BAEA58 /* SceneDelegate.swift */,
 				4284DAFD2493C11900BAEA58 /* CKRecordVideoViewController.swift */,
 				4284DB102493C3A400BAEA58 /* Video */,
-				42B8DB3924A00A8600D0BF76 /* sampleVideo.mov */,
 				4284DB182493CAB100BAEA58 /* Constants.swift */,
 				4284DAFF2493C11900BAEA58 /* Main.storyboard */,
 				4284DB022493C11D00BAEA58 /* Assets.xcassets */,
@@ -470,7 +467,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42B8DB3A24A00A8600D0BF76 /* sampleVideo.mov in Resources */,
 				4284DB062493C11D00BAEA58 /* LaunchScreen.storyboard in Resources */,
 				4284DB032493C11D00BAEA58 /* Assets.xcassets in Resources */,
 				4284DB012493C11900BAEA58 /* Main.storyboard in Resources */,

@@ -14,6 +14,7 @@ class CKRecordVideoViewController: UIViewController, AVCaptureFileOutputRecordin
     
     // MARK: OUTLETS: VIDEO RECORDING
     @IBOutlet private weak var recordVideoView: RecordVideoView!
+    @IBOutlet weak var iCloudButton: UIButton!
     @IBOutlet private weak var chooseCameraButton: UIButton!
     @IBOutlet private weak var recordVideoButton: UIButton!
     @IBOutlet private weak var resumeButton: UIButton!
@@ -203,6 +204,12 @@ class CKRecordVideoViewController: UIViewController, AVCaptureFileOutputRecordin
     // FIXME: MARK: Finish two additional life cycle methods
     
     // MARK: ACTIONS
+    // MARK: TODO: Complete implementation
+    @IBAction func iCloudButtonTapped(_ sender: Any) {
+        // Fetch a Video
+        // Assign video to self.videoURL
+        // Call programmaticPlayback
+    }
     
     // MARK: HELPERS
     @objc func handleModalDismissed() {
