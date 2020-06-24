@@ -1,8 +1,8 @@
 //
-//  PreviewVideoViewController.swift
-//  Playback A Recorded Video
+//  CKPreviewVideoViewController.swift
+//  Send A Video To CloudKit
 //
-//  Created by Sam LoBue on 6/9/20.
+//  Created by Sam LoBue on 6/24/20.
 //  Copyright © 2020 DjangoEarnhardt. All rights reserved.
 //
 
@@ -11,7 +11,7 @@ import CloudKit
 import Photos
 import UIKit
 
-class PreviewVideoViewController: UIViewController {
+class CKPreviewVideoViewController: UIViewController {
     
     // MARK: PROPERTIES
     let previewVideoViewWithControls: PreviewVideoViewWithControls = PreviewVideoViewWithControls()
@@ -91,7 +91,7 @@ class PreviewVideoViewController: UIViewController {
     
     func setupVideoForPlayback() {
         guard let videoURL = videoURL else { return }
-        let asset = AVAsset(url: videoURL)
+        let asset = AVAsset(url: videoURL.preparedForVideoPlayback())
         let playerItem = AVPlayerItem(asset: asset)
         let player = AVPlayer(playerItem: playerItem)
         previewVideoView.player = player
@@ -134,7 +134,7 @@ class PreviewVideoViewController: UIViewController {
     }
 }
 
-extension PreviewVideoViewController: VideoControlling {
+extension CKPreviewVideoViewController: VideoControlling {
     var previewVideoView: PreviewVideoView {
         get {
             return previewVideoViewWithControls.previewVideoView
@@ -184,7 +184,7 @@ extension PreviewVideoViewController: VideoControlling {
 }
 
 // MARK: CLEANUP
-extension PreviewVideoViewController {
+extension CKPreviewVideoViewController {
     func cleanup(videoURL: URL) {
         let path = videoURL.path
         if FileManager.default.fileExists(atPath: path) {
@@ -195,5 +195,21 @@ extension PreviewVideoViewController {
                 print("Could not remove file at url: \(videoURL)")
             }
         }
+    }
+}
+
+// MARK: PREPARE URL FOR VIDEO PLAYBACK
+extension URL {
+    /// A CKAsset needs Data from it's URL, and a local place to store itself for video playback
+    func preparedForVideoPlayback() -> URL {
+        // Create videoData from URL
+        let videoData = NSData(contentsOf: self)
+        // Find a location to save video to
+        let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+        let destinationPath = documentsPath.appending("/filename.MOV")
+        FileManager.default.createFile(atPath: destinationPath,contents:videoData as Data?, attributes:nil)
+        let fileURL = NSURL(fileURLWithPath: destinationPath)
+        // Return URL to preview video
+        return fileURL as URL
     }
 }

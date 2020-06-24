@@ -21,7 +21,7 @@ class VideoRecordingController {
             print(self.videoURL as Any)
         }
     }
-    var videos: [Video.Result] = []
+    var videos: [Video.Result?] = []
     
     // MARK: - CRUD
     // MARK: - Create
@@ -62,7 +62,8 @@ class VideoRecordingController {
             queryOperation.qualityOfService = .userInteractive
             guard let fastQuery = queryOperation.query else { return }
             
-            publicDB.perform(fastQuery, inZoneWith: nil) { (records, error) in
+            let container = CKContainer(identifier: "iCloud.CKVideo")
+            container.publicCloudDatabase.perform(fastQuery, inZoneWith: nil) { (records, error) in
                 if let error = error {
                     print("Error fetching recordings: \(error)")
                     completion(false)
@@ -72,6 +73,7 @@ class VideoRecordingController {
                 guard let records = records else { completion(false); return }
                 let videos = records.compactMap({ Video.Result(record: $0) })
                 self.videos = videos
+                print("\(videos.count) VIDEOS SUCCESSFULLY FETCHED")
                 completion(true)
             }
         }

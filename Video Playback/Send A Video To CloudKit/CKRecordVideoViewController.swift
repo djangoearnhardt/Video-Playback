@@ -22,7 +22,7 @@ class CKRecordVideoViewController: UIViewController, AVCaptureFileOutputRecordin
     
     // MARK: PROPERTIES
     var videoURL: URL? = nil // Set to nil, != nil then we can use videoPreviewViewWithControls' player
-    var previewVideoViewController = PreviewVideoViewController()
+    var ckPreviewVideoViewController = CKPreviewVideoViewController()
     var blurEffectView = UIVisualEffectView()
 
     enum Layout {
@@ -206,9 +206,20 @@ class CKRecordVideoViewController: UIViewController, AVCaptureFileOutputRecordin
     // MARK: ACTIONS
     // MARK: TODO: Complete implementation
     @IBAction func iCloudButtonTapped(_ sender: Any) {
-        // Fetch a Video
-        // Assign video to self.videoURL
-        // Call programmaticPlayback
+        // Fetch all Video
+        VideoRecordingController.sharedInstance.fetchVideos { success in
+            if !success { return }
+            else {
+                guard let previewVideo = VideoRecordingController.sharedInstance.videos[0] else { return }
+                // Assign video to self.videoURL
+                self.videoURL = previewVideo.videoAsset?.fileURL
+//                self.videoURL = previewVideo.videoAsset?.fileURL?.appendingPathExtension("mov") // Maybe???
+                // Call programmaticPlayback
+                DispatchQueue.main.async {
+                    self.programmaticPlayback()
+                }
+            }
+        }
     }
     
     // MARK: HELPERS
@@ -888,7 +899,7 @@ extension CKRecordVideoViewController {
     // MARK: NAVIGATION
     func programmaticPlayback() {
         guard (videoURL != nil) else { return }
-        let vc = PreviewVideoViewController()
+        let vc = CKPreviewVideoViewController()
         vc.videoURL = videoURL
         present(vc, animated: true)
         addBlurEffect()

@@ -15,6 +15,7 @@ extension Video {
         let name: String
 //        let ckRecordReference: CKRecord.Reference
 //        let ckRecordID: CKRecord.ID
+        // MARK: TODO - GET MODEL IN LINE W/ SOUND ADVICE, SET URL ETC
 //        var url: URL?
         var videoAsset: CKAsset?
 //        {

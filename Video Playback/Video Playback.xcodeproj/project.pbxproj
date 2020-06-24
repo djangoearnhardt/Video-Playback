@@ -21,6 +21,8 @@
 		421B63432479E43E00D53FB6 /* PlaybackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421B63422479E43E00D53FB6 /* PlaybackView.swift */; };
 		421B6345247A0FDD00D53FB6 /* PlayVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421B6344247A0FDD00D53FB6 /* PlayVideoViewController.swift */; };
 		423F6BE5247D5A22003D446B /* PlaybackSliderControlDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423F6BE4247D5A22003D446B /* PlaybackSliderControlDelegate.swift */; };
+		426D9D9724A39E7F00912AD9 /* CKPreviewVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426D9D9624A39E7F00912AD9 /* CKPreviewVideoViewController.swift */; };
+		426D9D9824A39F6200912AD9 /* PreviewVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C11FDA248FDC8F002F3587 /* PreviewVideoViewController.swift */; };
 		4284DAFA2493C11900BAEA58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4284DAF92493C11900BAEA58 /* AppDelegate.swift */; };
 		4284DAFC2493C11900BAEA58 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4284DAFB2493C11900BAEA58 /* SceneDelegate.swift */; };
 		4284DAFE2493C11900BAEA58 /* CKRecordVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4284DAFD2493C11900BAEA58 /* CKRecordVideoViewController.swift */; };
@@ -37,7 +39,6 @@
 		42A326CD2496CB370011BFA8 /* RecordVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E889FB248B4E8B00A7002E /* RecordVideoViewController.swift */; };
 		42A326CE2496CB3B0011BFA8 /* PreviewVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E88A00248B4F5000A7002E /* PreviewVideoView.swift */; };
 		42A326CF2496CB3E0011BFA8 /* PreviewVideoViewWithControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E88A02248B500C00A7002E /* PreviewVideoViewWithControls.swift */; };
-		42A326D02496CB400011BFA8 /* PreviewVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C11FDA248FDC8F002F3587 /* PreviewVideoViewController.swift */; };
 		42A326D12496CB430011BFA8 /* VideoControlling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E88A04248B50C200A7002E /* VideoControlling.swift */; };
 		42A326D22496CB460011BFA8 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429446C5248C6BA3007D6CFF /* UIButtonExtension.swift */; };
 		42A326D32496CB670011BFA8 /* PlaybackControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F68EAE247C45350092100D /* PlaybackControls.swift */; };
@@ -97,6 +98,7 @@
 		421B63422479E43E00D53FB6 /* PlaybackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackView.swift; sourceTree = "<group>"; };
 		421B6344247A0FDD00D53FB6 /* PlayVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayVideoViewController.swift; sourceTree = "<group>"; };
 		423F6BE4247D5A22003D446B /* PlaybackSliderControlDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSliderControlDelegate.swift; sourceTree = "<group>"; };
+		426D9D9624A39E7F00912AD9 /* CKPreviewVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKPreviewVideoViewController.swift; sourceTree = "<group>"; };
 		4284DAF72493C11900BAEA58 /* Send A Video To CloudKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Send A Video To CloudKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4284DAF92493C11900BAEA58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4284DAFB2493C11900BAEA58 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 				4284DAF92493C11900BAEA58 /* AppDelegate.swift */,
 				4284DAFB2493C11900BAEA58 /* SceneDelegate.swift */,
 				4284DAFD2493C11900BAEA58 /* CKRecordVideoViewController.swift */,
+				426D9D9624A39E7F00912AD9 /* CKPreviewVideoViewController.swift */,
 				4284DB102493C3A400BAEA58 /* Video */,
 				4284DB182493CAB100BAEA58 /* Constants.swift */,
 				4284DAFF2493C11900BAEA58 /* Main.storyboard */,
@@ -528,8 +531,8 @@
 				42A326CC2496CB340011BFA8 /* RecordVideoView.swift in Sources */,
 				42A326C92496BC820011BFA8 /* VideoRecordingController.swift in Sources */,
 				4284DB122493C3B700BAEA58 /* Video.swift in Sources */,
+				426D9D9824A39F6200912AD9 /* PreviewVideoViewController.swift in Sources */,
 				42A326CE2496CB3B0011BFA8 /* PreviewVideoView.swift in Sources */,
-				42A326D02496CB400011BFA8 /* PreviewVideoViewController.swift in Sources */,
 				4284DAFA2493C11900BAEA58 /* AppDelegate.swift in Sources */,
 				42A326D32496CB670011BFA8 /* PlaybackControls.swift in Sources */,
 				4284DAFC2493C11900BAEA58 /* SceneDelegate.swift in Sources */,
@@ -537,6 +540,7 @@
 				42A326D22496CB460011BFA8 /* UIButtonExtension.swift in Sources */,
 				4284DB192493CAB100BAEA58 /* Constants.swift in Sources */,
 				42A326CF2496CB3E0011BFA8 /* PreviewVideoViewWithControls.swift in Sources */,
+				426D9D9724A39E7F00912AD9 /* CKPreviewVideoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
